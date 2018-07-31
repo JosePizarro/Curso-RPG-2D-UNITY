@@ -7,13 +7,13 @@ using UnityEngine;  //NameSpace es un conjunto de clases
 public class InputPlayer : MonoBehaviour {
 
     //Joystick ejeHorizontal&Vertical -1,1
-    public float ejeHorizontal; //Por defecto un valor de 0
-    public float ejeVertical;
-    public bool atacar; //Bool verdadero o falso
-    public bool habilidad1;
-    public bool habilidad2;
-    public bool inventario;
-    public bool interactuar;
+   [HideInInspector] public float ejeHorizontal; //Por defecto un valor de 0
+   [HideInInspector] public float ejeVertical;
+   [HideInInspector] public bool atacar; //Bool verdadero o falso
+   [HideInInspector] public bool habilidad1;
+   [HideInInspector] public bool habilidad2;
+   [HideInInspector] public bool inventario;
+   [HideInInspector] public bool interactuar;
 
 
 	// Update is called once per frame
