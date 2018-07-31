@@ -7,37 +7,24 @@ using UnityEngine;  //NameSpace es un conjunto de clases
 public class InputPlayer : MonoBehaviour {
 
     //Joystick ejeHorizontal&Vertical -1,1
-    public float ejeHorizontal;
+    public float ejeHorizontal; //Por defecto un valor de 0
     public float ejeVertical;
+    private string pruebaDebug = "HOLA MUNDO";
 
 	// Use this for initialization //Vacío
 	void Start () {
-        ejeHorizontal = ejeHorizontal + 1;
-        ejeHorizontal += 1;
-        ejeHorizontal += 3;
-        ejeHorizontal++;
+        ejeHorizontal = ejeHorizontal + 1; //ejeHorizontal=1//
+        ejeHorizontal += 1; //ejeHorizontal=2
+        ejeHorizontal += 3; //ejeHorizontal=5
+        ejeHorizontal++; //ejeHorizontal =6
 
-        float misEjesSumados = SumarEjes(ejeHorizontal, ejeVertical);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update () { 
+
+        Debug.Log(ejeHorizontal);
+        Debug.Log("El valor del eje vertical es " +ejeVertical);    //Debug consume muchos recurso, es un problema para el performance 
 	}
 
-    public float EntregarEjeHorizontal()
-    {
-        ejeVertical = 1;
-        ejeHorizontal = 1;
-        float sumaEjes = 0;
-        sumaEjes = ejeVertical + ejeHorizontal;
-        return sumaEjes;
-    }
-
-    public float SumarEjes(float ejeHorizonta, float ejeVertical)
-    {
-        float sumaEjes = ejeHorizonta + ejeVertical;
-        EntregarEjeHorizontal();
-        return sumaEjes; 
-    }
 }
