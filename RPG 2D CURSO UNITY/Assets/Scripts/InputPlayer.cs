@@ -16,12 +16,6 @@ public class InputPlayer : MonoBehaviour {
     public bool interactuar;
 
 
-	// Use this for initialization //Vacío
-	void Start () {
-       
-
-	}
-	
 	// Update is called once per frame
 	void Update () {
         // atacar= Input.GetKeyDown(KeyCode.A); //No la recomiendo
@@ -34,7 +28,5 @@ public class InputPlayer : MonoBehaviour {
         //Definir ejes de movimiento
         ejeHorizontal = Input.GetAxis("Horizontal");
         ejeVertical = Input.GetAxis("Vertical");
-        Debug.Log("El eje horizontal es " + ejeHorizontal + " El eje vertical es " + ejeVertical);
 	}
-
 }
