@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
+       
     }
 
 	void FixedUpdate()
