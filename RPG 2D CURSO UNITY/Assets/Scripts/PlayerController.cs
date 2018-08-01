@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D miRigidbody2D; //camelCase
     private bool deEspaldas; //True si es que mi personaje se encuentra de espaldas
     private Animator animator;
+    private SpriteRenderer miSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -20,16 +21,28 @@ public class PlayerController : MonoBehaviour {
         transformada = GetComponent<Transform>();
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
         animator = GetComponent<Animator>();
+        miSprite = GetComponent<SpriteRenderer>();
 	}
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
 
     void Update() //GameLogic
     {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
         deEspaldas = (vertical > 0);
+        animator.SetFloat("X", horizontal);
+        animator.SetFloat("Y", vertical);
         bool verticalDistintoDeCero = (vertical != 0);
+        
+        if (horizontal>0)
+        {
+            miSprite.flipX = true;
+        }
+        else
+        {
+            miSprite.flipX = false;
+        }
         if (verticalDistintoDeCero)
         {
             //Si vertical es distinto de 0 se ejecutará este bloque de código
