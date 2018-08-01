@@ -31,39 +31,35 @@ public class PlayerController : MonoBehaviour {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
         deEspaldas = (vertical > 0);
-        animator.SetFloat("X", horizontal);
-        animator.SetFloat("Y", vertical);
-        bool verticalDistintoDeCero = (vertical != 0);
-        
-        if (horizontal>0)
+
+        VoltearSprite();
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            SetXYAnimator();
+        }
+    }
+
+    private void VoltearSprite()
+    {
+        if (horizontal > 0 && Mathf.Abs(vertical) < Mathf.Abs(horizontal))
         {
             miSprite.flipX = true;
         }
-        else
+        else if (horizontal != 0)
         {
             miSprite.flipX = false;
         }
-        if (verticalDistintoDeCero)
-        {
-            //Si vertical es distinto de 0 se ejecutará este bloque de código
-            animator.SetBool("espalda", deEspaldas);
-            Debug.Log("Vertical es distinto de 0!!!!");
-        }
-        else
-        {
-            Debug.Log("Vertical es igual a " + vertical);
-        }
-        
-      
-       
     }
 
-	void FixedUpdate()
+    private void SetXYAnimator()
     {
-        //Moveremos modificando la transformada
-        //Vector2 nuevaPosicion = transformada.position + new Vector3(velocidad * horizontal * Time.deltaTime, velocidad * vertical * Time.deltaTime, 0);
-        //transformada.position = nuevaPosicion;
+        animator.SetFloat("X", horizontal);
+        animator.SetFloat("Y", vertical);
+    }
 
+    void FixedUpdate()
+    {
         ///-------Movimiento------//
         Vector2 vectorVelocidad = new Vector2(horizontal, vertical) * velocidad;
         miRigidbody2D.velocity = vectorVelocidad;
