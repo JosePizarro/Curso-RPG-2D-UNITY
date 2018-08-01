@@ -29,8 +29,19 @@ public class PlayerController : MonoBehaviour {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
         deEspaldas = (vertical > 0);
-        animator.SetBool("espalda", deEspaldas);
-        Debug.Log("De espaldas es "+deEspaldas);
+        bool verticalDistintoDeCero = (vertical != 0);
+        if (verticalDistintoDeCero)
+        {
+            //Si vertical es distinto de 0 se ejecutará este bloque de código
+            animator.SetBool("espalda", deEspaldas);
+            Debug.Log("Vertical es distinto de 0!!!!");
+        }
+        else
+        {
+            Debug.Log("Vertical es igual a " + vertical);
+        }
+        
+      
        
     }
 
