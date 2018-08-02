@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour {
     private float horizontal;
     private float vertical;
     private Rigidbody2D miRigidbody2D; //camelCase
-    private bool deEspaldas; //True si es que mi personaje se encuentra de espaldas
     private Animator animator;
     private SpriteRenderer miSprite;
+    int correrHashCode;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
         animator = GetComponent<Animator>();
         miSprite = GetComponent<SpriteRenderer>();
+        correrHashCode = Animator.StringToHash("Corriendo");
 	}
 
     // Update is called once per frame
@@ -30,19 +31,23 @@ public class PlayerController : MonoBehaviour {
     {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
-        deEspaldas = (vertical > 0);
 
         VoltearSprite();
 
         if (horizontal != 0 || vertical != 0)
         {
             SetXYAnimator();
+            animator.SetBool(correrHashCode, true);
+        }
+        else
+        {
+            animator.SetBool(correrHashCode, false);
         }
     }
 
     private void VoltearSprite()
     {
-        if (horizontal > 0 && Mathf.Abs(vertical) < Mathf.Abs(horizontal))
+        if (horizontal < 0 && Mathf.Abs(vertical) < Mathf.Abs(horizontal))
         {
             miSprite.flipX = true;
         }
