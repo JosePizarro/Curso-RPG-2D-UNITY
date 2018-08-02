@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Muralla
+    uniqueID: 2806697675
+    locked: 0
+  - name: Elementos
+    uniqueID: 2427050989
+    locked: 0
