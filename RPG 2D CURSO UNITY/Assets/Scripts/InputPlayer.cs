@@ -7,14 +7,29 @@ using UnityEngine;  //NameSpace es un conjunto de clases
 public class InputPlayer : MonoBehaviour {
 
     //Joystick ejeHorizontal&Vertical -1,1
-   [HideInInspector] public float ejeHorizontal; //Por defecto un valor de 0
-   [HideInInspector] public float ejeVertical;
-   [HideInInspector] public bool atacar; //Bool verdadero o falso
-   [HideInInspector] public bool habilidad1;
-   [HideInInspector] public bool habilidad2;
-   [HideInInspector] public bool inventario;
-   [HideInInspector] public bool interactuar;
+    
+    [HideInInspector] public float ejeHorizontal{ get; private set; } //Por defecto un valor de 0
+   [HideInInspector] public float ejeVertical  { get; private set; }
+   [HideInInspector] public bool atacar        { get; private set; }
+   [HideInInspector] public bool habilidad1   { get; private set; }
+   [HideInInspector] public bool habilidad2    { get; private set; }
+   [HideInInspector] public bool inventario   { get; private set; }
+   [HideInInspector] public bool interactuar   { get; private set; }
 
+    private float variableFloatPrivada;
+    public float VariableFloatPrivada
+    {
+        get
+        {
+            Debug.Log("Obteniendo mi propiedad VariableFloatPrivada");
+            return variableFloatPrivada;
+        }
+         set
+        {
+            Debug.Log("Asignando mi valor VariableFloatPrivada a " + value);
+            variableFloatPrivada = value; //value es igual al valor que yo le asigne a mi propiedad
+        }
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -29,4 +44,6 @@ public class InputPlayer : MonoBehaviour {
         ejeHorizontal = Input.GetAxis("Horizontal");
         ejeVertical = Input.GetAxis("Vertical");
 	}
+
+
 }
