@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
         Debug.Log(inputJugador.VariableFloatPrivada);
         inputJugador.VariableFloatPrivada = 3.14f;
         Debug.Log(inputJugador.VariableFloatPrivada);
+        
 	}
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         horizontal = inputJugador.ejeHorizontal;
         vertical = inputJugador.ejeVertical;
 
-        VoltearSprite();
+        //VoltearSprite();
 
         if (horizontal != 0 || vertical != 0)
         {
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 
     private void VoltearSprite()
     {
-        if (horizontal < 0 && Mathf.Abs(vertical) < Mathf.Abs(horizontal))
+        if (horizontal < 0 && Mathf.Abs(vertical) <= Mathf.Abs(horizontal))
         {
             miSprite.flipX = true;
         }
