@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour {
 
         //VoltearSprite();
 
+
         if (horizontal != 0 || vertical != 0)
         {
             SetXYAnimator();

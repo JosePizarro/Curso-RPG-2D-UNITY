@@ -8,7 +8,7 @@ public class InputPlayer : MonoBehaviour {
 
     //Joystick ejeHorizontal&Vertical -1,1
     
-    [HideInInspector] public float ejeHorizontal{ get; private set; } //Por defecto un valor de 0
+   [HideInInspector] public float ejeHorizontal{ get; private set; } //Por defecto un valor de 0
    [HideInInspector] public float ejeVertical  { get; private set; }
    [HideInInspector] public bool atacar        { get; private set; }
    [HideInInspector] public bool habilidad1   { get; private set; }
