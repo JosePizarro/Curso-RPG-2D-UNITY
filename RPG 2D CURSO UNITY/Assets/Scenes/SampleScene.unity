@@ -208,7 +208,7 @@ MonoBehaviour:
   m_DeadZoneWidth: 0.217
   m_DeadZoneHeight: 0.366
   m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 0
+  m_UnlimitedSoftZone: 1
   m_SoftZoneWidth: 0.61
   m_SoftZoneHeight: 1
   m_BiasX: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1766082052}
   m_Lens:
-    FieldOfView: 40
-    OrthographicSize: 10
+    FieldOfView: 38.51
+    OrthographicSize: 5.48
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -5340,7 +5340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 85
+  m_AssetsPPU: 98
   m_RefResolutionX: 1920
   m_RefResolutionY: 1080
   m_UpscaleRT: 0
@@ -5370,9 +5370,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 38.51
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5.48
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5395,7 +5395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2, y: -0.3285182, z: -10}
+  m_LocalPosition: {x: -2.2, y: -0.32014805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 337727726}
