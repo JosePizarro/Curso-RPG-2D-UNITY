@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;  //NameSpace es un conjunto de clases
+using UnityEngine.SceneManagement;
 
 
 //Alcance--- //class-->clase //InputPlayer -->Nombre de la clase 
@@ -39,7 +40,6 @@ public class InputPlayer : MonoBehaviour {
         habilidad2 = Input.GetButtonDown("Habilidad2");
         inventario = Input.GetButtonDown("Inventario");
         interactuar = Input.GetButtonDown("Interactuar");
-
         //Definir ejes de movimiento
         ejeHorizontal = Input.GetAxis("Horizontal");
         ejeVertical = Input.GetAxis("Vertical");
