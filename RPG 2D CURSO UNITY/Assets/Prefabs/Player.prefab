@@ -21,10 +21,12 @@ GameObject:
   - component: {fileID: 4298133783947374}
   - component: {fileID: 212970568210243424}
   - component: {fileID: 114771831061998456}
-  - component: {fileID: 114656835252641358}
   - component: {fileID: 50848586528183706}
   - component: {fileID: 70009449372903134}
   - component: {fileID: 95157328747374486}
+  - component: {fileID: 114618731516226918}
+  - component: {fileID: 114306566766592786}
+  - component: {fileID: 114296271644794112}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -56,7 +58,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2.5113688
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -98,7 +100,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114656835252641358
+--- !u!114 &114296271644794112
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +111,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10af4c47efbc5c4ab7656fff06c82c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114306566766592786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604799604855434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99345ac9646b87f4eb0718a8f928aee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   velocidad: 6
+  ataque: 0
+--- !u!114 &114618731516226918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604799604855434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88309314022b4d54b939aa472e0f9fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114771831061998456
 MonoBehaviour:
   m_ObjectHideFlags: 1

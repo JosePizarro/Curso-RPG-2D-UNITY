@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
 
-    [SerializeField] private float velocidad = 1; //unidades de espacio global por segundo [m/s]
+[RequireComponent(typeof(Atributos))]
+public class PlayerController : MonoBehaviour {
 
     private InputPlayer inputJugador;
     private Transform transformada;
@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D miRigidbody2D; //camelCase
     private Animator animator;
     private SpriteRenderer miSprite;
+    private Atributos atributosJugador;
     int correrHashCode;
 
 	// Use this for initialization
 	void Start () {
+        atributosJugador = GetComponent<Atributos>();
         inputJugador = GetComponent<InputPlayer>();
         transformada = GetComponent<Transform>();
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         ///-------Movimiento------//
-        Vector2 vectorVelocidad = new Vector2(horizontal, vertical) * velocidad;
+        Vector2 vectorVelocidad = new Vector2(horizontal, vertical) *atributosJugador.velocidad;
         miRigidbody2D.velocity = vectorVelocidad;
     }
 }
