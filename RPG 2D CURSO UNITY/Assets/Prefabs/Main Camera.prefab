@@ -13,7 +13,7 @@ Prefab:
   m_IsPrefabAsset: 1
 --- !u!1 &1349661826471692
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4627363686061524}
   - component: {fileID: 114766455237322982}
   - component: {fileID: 114198122018923938}
+  - component: {fileID: 114748625032313522}
   m_Layer: 0
   m_Name: Camara virtual 2D
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4683202455907150
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349661826471692}
@@ -225,7 +226,7 @@ MonoBehaviour:
   m_StretchFill: 0
 --- !u!114 &114712473361731924
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349661826471692}
@@ -262,9 +263,20 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 100
---- !u!114 &114749413418846364
+--- !u!114 &114748625032313522
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655534281617828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947c038e191113443b9497fb24ba6fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114749413418846364
+MonoBehaviour:
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349661826471692}
@@ -291,7 +303,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 4148216922346660, guid: 7b8a01ee42fa1c140aebaba26696b05f, type: 2}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 38.51
     OrthographicSize: 3.57

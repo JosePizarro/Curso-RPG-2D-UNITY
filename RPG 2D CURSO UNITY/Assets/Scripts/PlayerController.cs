@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour {
         Debug.Log(inputJugador.VariableFloatPrivada);
         inputJugador.VariableFloatPrivada = 3.14f;
         Debug.Log(inputJugador.VariableFloatPrivada);
-        
 	}
+
 
     // Update is called once per frame
 
