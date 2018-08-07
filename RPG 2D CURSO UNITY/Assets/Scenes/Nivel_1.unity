@@ -113,6 +113,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &311288400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1655534281617828, guid: 17f49e1911518704ca46b365f510326d,
+    type: 2}
+  m_PrefabInternal: {fileID: 599342692}
+--- !u!114 &311288404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311288400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947c038e191113443b9497fb24ba6fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 0}
 --- !u!4 &584436520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4298133783947374, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
@@ -131,7 +148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4843004369683704, guid: 17f49e1911518704ca46b365f510326d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.316611
+      value: -0.32733303
       objectReference: {fileID: 0}
     - target: {fileID: 4843004369683704, guid: 17f49e1911518704ca46b365f510326d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -169,11 +186,16 @@ Prefab:
     - target: {fileID: 20201664705461592, guid: 17f49e1911518704ca46b365f510326d,
         type: 2}
       propertyPath: orthographic size
-      value: 3.57
+      value: 9.36
       objectReference: {fileID: 0}
     - target: {fileID: 4627363686061524, guid: 17f49e1911518704ca46b365f510326d, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114766455237322982, guid: 17f49e1911518704ca46b365f510326d,
+        type: 2}
+      propertyPath: m_Lens.OrthographicSize
+      value: 9.36
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114748625032313522, guid: 17f49e1911518704ca46b365f510326d, type: 2}
