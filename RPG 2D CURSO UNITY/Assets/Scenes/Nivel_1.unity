@@ -445,3 +445,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1778383131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604799604855434, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+    type: 2}
+  m_PrefabInternal: {fileID: 1778383130}
+--- !u!114 &1778383132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1778383131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663bc1bacb614b34b959fab57adb4702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desfase: 1
+  "tama\xF1oHitBox": {x: 1, y: 1}
