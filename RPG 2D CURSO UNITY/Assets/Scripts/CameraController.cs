@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     private void Start()
     {
         cv = GetComponent<CinemachineVirtualCamera>();
-        Transform jugador = GameObject.FindGameObjectWithTag("Player").transform;
+        Transform jugador = GameManager.instance.jugador.transform;
         cv.m_Follow = jugador;
     }
 }

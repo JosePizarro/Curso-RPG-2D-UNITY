@@ -6,9 +6,19 @@ public class GameManager : MonoBehaviour {
 
     public Transform playerSpawnPoint; //Punto de inicio de mi jugador
     public GameObject jugador;
-    
-	// Use this for initialization
-	void Start () {
+    public static GameManager instance { get; private set; }
+
+    // Use this for initialization
+
+    private void Awake()
+    {
+        if (instance==null)
+        {
+            instance = this;
+        }
+    }
+
+    void Start () {
         jugador = GameObject.FindGameObjectWithTag("Player");
         jugador.transform.position = playerSpawnPoint.position;
 	}
