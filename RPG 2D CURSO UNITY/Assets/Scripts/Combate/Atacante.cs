@@ -10,6 +10,13 @@ public class Atacante : MonoBehaviour {
     private Vector2 puntoA, puntoB;
     public LayerMask layerAtaque;
     private Collider2D[] ataqueColliders = new Collider2D[12];
+    private ContactFilter2D filtroDeAtaque;
+
+    private void Start()
+    {
+        filtroDeAtaque.layerMask = layerAtaque;
+    }
+
 
     private void Update()
     {
@@ -17,10 +24,12 @@ public class Atacante : MonoBehaviour {
         Debug.DrawLine(puntoA, puntoB, Color.red);
     }
 
+
     public void Atacar(Vector2 direccionDeAtaque, int danio)
     {
         CrearHitBox(direccionDeAtaque);
-        
+       int elementosAtacados=  Physics2D.OverlapArea(puntoA, puntoB,filtroDeAtaque,ataqueColliders);
+        Debug.Log("el numero de elementos atacados es"+elementosAtacados);
     }
 
     private void CrearHitBox(Vector2 direccionDeAtaque)
