@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour {
         miSprite = GetComponent<SpriteRenderer>();
         atacante = GetComponent<Atacante>();
         correrHashCode = Animator.StringToHash("Corriendo");
-        Debug.Log(inputJugador.VariableFloatPrivada);
-        inputJugador.VariableFloatPrivada = 3.14f;
 	}
 
     // Update is called once per frame
@@ -52,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Atacar"))
         {
-            atacante.Atacar(new Vector2(horizontal, vertical), atributosJugador.ataque);
+            atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
         }
     }
 
