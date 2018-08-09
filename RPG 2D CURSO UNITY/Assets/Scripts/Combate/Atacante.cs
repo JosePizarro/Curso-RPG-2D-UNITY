@@ -8,7 +8,7 @@ public class Atacante : MonoBehaviour {
     public Vector2 hitBox = new Vector2(1, 1);
     private Vector2 vectorDesfaseAtaque;
     private Vector2 puntoA, puntoB;
-
+    public LayerMask layerAtaque;
 
     private void Update()
     {
