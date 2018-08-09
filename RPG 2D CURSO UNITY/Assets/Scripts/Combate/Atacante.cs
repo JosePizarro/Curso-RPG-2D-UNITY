@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class Atacante : MonoBehaviour {
 
-    public float desfase = 1f; //Desfase entre nuestro personaje y el centro de nuestro hitbox
-    public Vector2 tamañoHitBox = new Vector2(1f, 1f); //definirá el tamaño de nuestro hitbox
-	
-    public void Atacar(Vector2 direccionAtaque, int danio)
+    public float desfase = 1f;
+    public Vector2 hitBox = new Vector2(1, 1);
+    private Vector2 vectorDesfaseAtaque;
+    private Vector2 puntoA, puntoB;
+
+
+    private void Update()
     {
-        Vector2 vectorDesfase = direccionAtaque.normalized * desfase; //Vector normalizado es un vector cuya magnitud es igual a 1, esto significa que solamente trabajaremos con su dirección y la magnitud estará definida por el coeficiente que lo multiplique
-        Vector2 puntoA = (Vector2)transform.position + vectorDesfase - tamañoHitBox * 0.5f;
-        Vector2 puntoB = (Vector2)transform.position + vectorDesfase;
+        Debug.DrawLine(transform.position, (Vector2)transform.position + vectorDesfaseAtaque, Color.yellow);
+        Debug.DrawLine(puntoA, puntoB, Color.red);
+    }
+
+    public void Atacar(Vector2 direccionDeAtaque, int danio)
+    {
+        Debug.Log("Hola estoy atacando!!");
+        vectorDesfaseAtaque = direccionDeAtaque.normalized * desfase;
+        puntoA = (Vector2)transform.position + vectorDesfaseAtaque - hitBox * 0.5f;
+        puntoB = puntoA + hitBox;
+
+
     }
 
 }

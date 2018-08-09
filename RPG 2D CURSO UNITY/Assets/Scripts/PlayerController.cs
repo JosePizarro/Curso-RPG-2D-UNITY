@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     private SpriteRenderer miSprite;
     private Atributos atributosJugador;
+    private Atacante atacante;
     int correrHashCode;
 
 	// Use this for initialization
@@ -24,12 +25,11 @@ public class PlayerController : MonoBehaviour {
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
         animator = GetComponent<Animator>();
         miSprite = GetComponent<SpriteRenderer>();
+        atacante = GetComponent<Atacante>();
         correrHashCode = Animator.StringToHash("Corriendo");
         Debug.Log(inputJugador.VariableFloatPrivada);
         inputJugador.VariableFloatPrivada = 3.14f;
-        Debug.Log(inputJugador.VariableFloatPrivada);
 	}
-
 
     // Update is called once per frame
 
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour {
 
         //VoltearSprite();
 
-
         if (horizontal != 0 || vertical != 0)
         {
             SetXYAnimator();
@@ -49,6 +48,11 @@ public class PlayerController : MonoBehaviour {
         else
         {
             animator.SetBool(correrHashCode, false);
+        }
+
+        if (Input.GetButtonDown("Atacar"))
+        {
+            atacante.Atacar(new Vector2(horizontal, vertical), atributosJugador.ataque);
         }
     }
 

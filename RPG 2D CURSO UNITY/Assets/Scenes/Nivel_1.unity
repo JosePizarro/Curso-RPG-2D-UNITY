@@ -442,6 +442,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114306566766592786, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+        type: 2}
+      propertyPath: velocidad
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_IsPrefabAsset: 0
@@ -462,4 +467,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desfase: 1
-  "tama\xF1oHitBox": {x: 1, y: 1}
+  hitBox: {x: 1, y: 1}

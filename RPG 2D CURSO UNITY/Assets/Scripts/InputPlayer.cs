@@ -45,5 +45,5 @@ public class InputPlayer : MonoBehaviour {
         ejeVertical = Input.GetAxis("Vertical");
 	}
 
-
+    
 }
