@@ -447,6 +447,11 @@ Prefab:
       propertyPath: velocidad
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114771831061998456, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+        type: 2}
+      propertyPath: direccionMirada.y
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_IsPrefabAsset: 0

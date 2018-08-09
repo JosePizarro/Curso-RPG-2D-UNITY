@@ -18,12 +18,15 @@ public class Atacante : MonoBehaviour {
 
     public void Atacar(Vector2 direccionDeAtaque, int danio)
     {
-        Debug.Log("Hola estoy atacando!!");
-        vectorDesfaseAtaque = direccionDeAtaque.normalized * desfase;
-        puntoA = (Vector2)transform.position + vectorDesfaseAtaque - hitBox * 0.5f;
-        puntoB = puntoA + hitBox;
-
-
+        CrearHitBox(direccionDeAtaque);
     }
 
+    private void CrearHitBox(Vector2 direccionDeAtaque)
+    {
+        Vector2 escala = transform.lossyScale; //(2,3)
+        Vector2 hitBoxEscalado = Vector2.Scale(hitBox, escala);
+        vectorDesfaseAtaque = Vector2.Scale(direccionDeAtaque.normalized * desfase, escala);
+        puntoA = (Vector2)transform.position + vectorDesfaseAtaque - hitBoxEscalado * 0.5f;
+        puntoB = puntoA + hitBoxEscalado;
+    }
 }
