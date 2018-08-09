@@ -372,6 +372,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1848434827419294, guid: 2e7a7cfa01caf4345877795604a465e9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7a7cfa01caf4345877795604a465e9, type: 2}
   m_IsPrefabAsset: 0
@@ -471,5 +475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663bc1bacb614b34b959fab57adb4702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desfase: 1
-  hitBox: {x: 1, y: 1}
+  desfase: 1.5
+  hitBox: {x: 2, y: 2}
+  layerAtaque:
+    serializedVersion: 2
+    m_Bits: 256

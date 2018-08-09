@@ -9,6 +9,7 @@ public class Atacante : MonoBehaviour {
     private Vector2 vectorDesfaseAtaque;
     private Vector2 puntoA, puntoB;
     public LayerMask layerAtaque;
+    private Collider2D[] ataqueColliders = new Collider2D[12];
 
     private void Update()
     {
@@ -19,6 +20,7 @@ public class Atacante : MonoBehaviour {
     public void Atacar(Vector2 direccionDeAtaque, int danio)
     {
         CrearHitBox(direccionDeAtaque);
+        
     }
 
     private void CrearHitBox(Vector2 direccionDeAtaque)

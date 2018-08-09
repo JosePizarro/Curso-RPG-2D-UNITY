@@ -16,9 +16,19 @@ public class PlayerController : MonoBehaviour {
     private Atributos atributosJugador;
     private Atacante atacante;
     int correrHashCode;
+    public int[] arrayPrueba2 = new int[5];
+    public int[] arrayPrueba = { 2, 3, 5, 1, 6 };
 
 	// Use this for initialization
 	void Start () {
+        arrayPrueba2[0] = 2;
+        arrayPrueba2[1] = 3;
+        arrayPrueba2[2] = 5;
+        arrayPrueba2[3] = 1;
+        arrayPrueba2[4] = 6;
+        arrayPrueba[0] = 10;
+        
+        Debug.Log(arrayPrueba.Length);
         atributosJugador = GetComponent<Atributos>();
         inputJugador = GetComponent<InputPlayer>();
         transformada = GetComponent<Transform>();
