@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Atacar"))
         {
             atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
+            animator.SetTrigger("Atacar");
         }
     }
 
