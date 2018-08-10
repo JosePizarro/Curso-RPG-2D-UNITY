@@ -28,8 +28,17 @@ public class Atacante : MonoBehaviour {
     public void Atacar(Vector2 direccionDeAtaque, int danio)
     {
         CrearHitBox(direccionDeAtaque);
+       GameObject objetoAtacado;
        int elementosAtacados=  Physics2D.OverlapArea(puntoA, puntoB,filtroDeAtaque,ataqueColliders);
         Debug.Log("el numero de elementos atacados es"+elementosAtacados);
+        for(int i = 0; i < elementosAtacados; i++)
+        {
+            objetoAtacado = ataqueColliders[i].gameObject;
+            if (objetoAtacado.GetComponent<Atacable>())
+            {
+                objetoAtacado.GetComponent<Atacable>().RecibirAtaque();
+            }
+        }
     }
 
     private void CrearHitBox(Vector2 direccionDeAtaque)

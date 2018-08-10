@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Atacable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void RecibirAtaque()
+    {
+        Debug.Log("Hola estoy recibiendo un ataque!!");
+    }
 }
