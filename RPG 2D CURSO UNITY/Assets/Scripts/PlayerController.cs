@@ -60,8 +60,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Atacar"))
         {
-            atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
-            animator.SetTrigger("Atacar");
+            animator.SetBool("Atacando", true);
         }
     }
 
@@ -86,7 +85,20 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         ///-------Movimiento------//
-        Vector2 vectorVelocidad = new Vector2(horizontal, vertical) *atributosJugador.velocidad;
-        miRigidbody2D.velocity = vectorVelocidad;
+        if (animator.GetBool("Atacando"))
+        {
+            miRigidbody2D.velocity = Vector2.zero; 
+        }
+        else
+        {
+            Vector2 vectorVelocidad = new Vector2(horizontal, vertical) * atributosJugador.velocidad;
+            miRigidbody2D.velocity = vectorVelocidad;
+        }
+    }
+
+    void ControllerAtacar()
+    {
+        atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
+        animator.SetBool("Atacando", false);
     }
 }
