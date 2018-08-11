@@ -14,9 +14,13 @@ public class Salud : MonoBehaviour {
         }
         set
         {
-            if (value>0)
+            if (value>0 && value<=saludBase)
             {
                 saludActual = value;
+            }
+            else if (value>saludBase)
+            {
+                saludActual = saludBase;
             }
             else
             {
@@ -30,4 +34,9 @@ public class Salud : MonoBehaviour {
     void Start () {
         SaludActual = saludBase;
 	}
+
+    public void modificarSaludActual(int cantidad)
+    {
+        SaludActual += cantidad;
+    }
 }

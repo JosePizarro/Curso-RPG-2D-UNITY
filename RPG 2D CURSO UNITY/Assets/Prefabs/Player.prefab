@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114618731516226918}
   - component: {fileID: 114306566766592786}
   - component: {fileID: 114296271644794112}
+  - component: {fileID: 114265390702704432}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -100,6 +101,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114265390702704432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604799604855434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663bc1bacb614b34b959fab57adb4702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desfase: 1.5
+  hitBox: {x: 2, y: 2}
+  layerAtaque:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &114296271644794112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10af4c47efbc5c4ab7656fff06c82c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrayPrueba2: 0000000000000000000000000000000000000000
+  arrayPrueba: 0200000003000000050000000100000006000000
 --- !u!114 &114306566766592786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 6
-  ataque: 0
+  ataque: 2
 --- !u!114 &114618731516226918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64fe497e8cace48ac859cf99d0a477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direccionMirada: {x: 0, y: -1}
 --- !u!212 &212970568210243424
 SpriteRenderer:
   m_ObjectHideFlags: 1
