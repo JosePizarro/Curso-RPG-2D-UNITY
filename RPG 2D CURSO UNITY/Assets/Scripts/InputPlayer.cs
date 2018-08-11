@@ -46,5 +46,4 @@ public class InputPlayer : MonoBehaviour {
             direccionMirada.y = ejeVertical;
         }
     }
-
 }
