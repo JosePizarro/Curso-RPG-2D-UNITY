@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Salud : MonoBehaviour {
 
     public int saludBase;
     private int saludActual;
+    public UnityEvent OnMorir;
     public int SaludActual
     {
         get
@@ -21,6 +21,7 @@ public class Salud : MonoBehaviour {
             else
             {
                 saludActual = 0;
+                Destroy(gameObject); //Destruir no destruye al objeto instantaneamente- Sino que lo destruirá en el siguiente frame
             }
         }
     }
@@ -29,6 +30,4 @@ public class Salud : MonoBehaviour {
     void Start () {
         SaludActual = saludBase;
 	}
-	
-	
 }

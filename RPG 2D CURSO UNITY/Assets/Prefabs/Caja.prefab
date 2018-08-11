@@ -90,7 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c60b05d999a145885287cd17acda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saludBase: 10
+  saludBase: 2
+  OnMorir:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212564945761278654
 SpriteRenderer:
   m_ObjectHideFlags: 1
