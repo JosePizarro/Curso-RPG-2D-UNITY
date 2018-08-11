@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4581222876701342}
   - component: {fileID: 212564945761278654}
   - component: {fileID: 61111509509267948}
+  - component: {fileID: 114547855863953162}
   - component: {fileID: 114012899157244892}
   m_Layer: 8
   m_Name: Caja
@@ -78,6 +79,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1053b28ab4d304aa50c5a354745f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114547855863953162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118546244327018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01c60b05d999a145885287cd17acda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saludBase: 10
 --- !u!212 &212564945761278654
 SpriteRenderer:
   m_ObjectHideFlags: 1

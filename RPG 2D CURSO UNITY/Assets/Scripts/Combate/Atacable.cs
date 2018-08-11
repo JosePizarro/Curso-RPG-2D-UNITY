@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Atacable : MonoBehaviour {
 
-	public void RecibirAtaque()
+    private Salud miSalud;
+
+    private void Start()
     {
-        Debug.Log("Hola estoy recibiendo un ataque!!");
+        miSalud = GetComponent<Salud>();
+    }
+
+    public void RecibirAtaque()
+    {
+        miSalud.SaludActual -= 1;
     }
 }

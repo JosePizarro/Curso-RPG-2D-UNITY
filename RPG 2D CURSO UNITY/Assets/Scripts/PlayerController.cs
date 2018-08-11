@@ -58,10 +58,7 @@ public class PlayerController : MonoBehaviour {
             animator.SetBool(correrHashCode, false);
         }
 
-        if (Input.GetButtonDown("Atacar"))
-        {
-            animator.SetBool("Atacando", true);
-        }
+       
     }
 
     private void VoltearSprite()
@@ -85,6 +82,12 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         ///-------Movimiento------//
+        ///
+        if (Input.GetButtonDown("Atacar"))
+        {
+            animator.SetBool("Atacando", true);
+        }
+
         if (animator.GetBool("Atacando"))
         {
             miRigidbody2D.velocity = Vector2.zero; 
