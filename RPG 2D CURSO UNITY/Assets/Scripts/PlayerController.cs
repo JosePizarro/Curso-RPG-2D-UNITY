@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[RequireComponent(typeof(Atributos))]
 public class PlayerController : MonoBehaviour {
 
     private InputPlayer inputJugador;
@@ -13,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D miRigidbody2D; //camelCase
     private Animator animator;
     private SpriteRenderer miSprite;
-    private Atributos atributosJugador;
+    public Atributos atributosJugador;
     private Atacante atacante;
     int correrHashCode;
     public int[] arrayPrueba2 = new int[5];
@@ -29,7 +27,6 @@ public class PlayerController : MonoBehaviour {
         arrayPrueba[0] = 10;
         
         Debug.Log(arrayPrueba.Length);
-        atributosJugador = GetComponent<Atributos>();
         inputJugador = GetComponent<InputPlayer>();
         transformada = GetComponent<Transform>();
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
