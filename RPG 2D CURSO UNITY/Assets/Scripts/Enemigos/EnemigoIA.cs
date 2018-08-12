@@ -63,7 +63,7 @@ public class EnemigoIA : Enemigo {
     {
         int probabilidadDeAtaque = Random.Range(0, 100);
         animator.SetBool(correrHash, false);
-        Debug.Log(probabilidadDeAtaque);
+
         if (probabilidadDeAtaque > 95)
         {
             direccionAtaque = input.direccionHaciaJugador;

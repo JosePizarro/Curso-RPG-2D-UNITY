@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Habilidad : MonoBehaviour {
 
-
     public void DispararProyectil(Proyectil proyectil, float velocidadInicial, Vector2 direccion, int danio)
     {
         GameObject nuevoProyectil = Instantiate(proyectil.gameObject,transform.position,Quaternion.identity);
