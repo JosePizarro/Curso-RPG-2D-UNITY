@@ -13,6 +13,7 @@ public class Caballero : Enemigo {
     private Vector2 direccionAtaque;
     private int correrHash;
     private int atacarHash;
+    private int muerteHash;
     private Animator animator;
 
     [SerializeField] private float distanciaDeteccion;
@@ -27,6 +28,8 @@ public class Caballero : Enemigo {
         PresentarseDeFormaCortez();
         correrHash = Animator.StringToHash("Corriendo");
         atacarHash = Animator.StringToHash("Atacar");
+        muerteHash = Animator.StringToHash("Muerto");
+
 
     }
 
@@ -96,5 +99,11 @@ public class Caballero : Enemigo {
     void SetAtacandoFalse()
     {
         atacando = false;
+    }
+
+    public void Morir()
+    {
+        muerto = true;
+        animator.SetBool(muerteHash, true);
     }
 }

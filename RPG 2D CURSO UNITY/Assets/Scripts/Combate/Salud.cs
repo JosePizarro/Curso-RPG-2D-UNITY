@@ -25,7 +25,10 @@ public class Salud : MonoBehaviour {
             else
             {
                 saludActual = 0;
-                Destroy(gameObject); //Destruir no destruye al objeto instantaneamente- Sino que lo destruirá en el siguiente frame
+                if (OnMorir!=null)
+                {
+                    OnMorir.Invoke();
+                }
             }
         }
     }
@@ -38,5 +41,10 @@ public class Salud : MonoBehaviour {
     public void modificarSaludActual(int cantidad)
     {
         SaludActual += cantidad;
+    }
+
+    private void DestruirGameObject()
+    {
+        Destroy(gameObject);
     }
 }
