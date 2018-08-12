@@ -15,6 +15,7 @@ public class Atacante : MonoBehaviour {
     private void Start()
     {
         filtroDeAtaque.layerMask = layerAtaque;
+        filtroDeAtaque.useLayerMask = true;
     }
 
 

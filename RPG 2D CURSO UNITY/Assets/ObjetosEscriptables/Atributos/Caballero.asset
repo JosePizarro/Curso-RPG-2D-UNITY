@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99345ac9646b87f4eb0718a8f928aee6, type: 3}
   m_Name: Caballero
   m_EditorClassIdentifier: 
-  velocidad: -1
+  velocidad: 1
   ataque: 5

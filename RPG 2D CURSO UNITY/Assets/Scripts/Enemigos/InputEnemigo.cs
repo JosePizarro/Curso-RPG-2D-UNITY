@@ -16,13 +16,23 @@ public class InputEnemigo : MonoBehaviour {
     public float distanciaJugador { get {return direccionHaciaJugador.magnitude;}}
     public Vector2 direccionHaciaJugador { get; private set; }
 
-	// Use this for initialization
-	void Start () {
-       // jugador = GameManager.instance.jugador.transform;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        direccionHaciaJugador = jugador.position - transform.transform.position;
-	}
+    // Use this for initialization
+    //DRY don't repeat yourself!!!
+    private void Start()
+    {
+        DefinirDireccionHaciaJugador();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        DefinirDireccionHaciaJugador();
+    }
+
+
+
+    private void DefinirDireccionHaciaJugador()
+    {
+        direccionHaciaJugador = jugador.position - transform.position;
+    }
 }

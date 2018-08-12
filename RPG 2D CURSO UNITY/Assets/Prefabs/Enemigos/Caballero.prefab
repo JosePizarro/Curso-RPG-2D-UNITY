@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114232213006191846}
   - component: {fileID: 114582899562133676}
   - component: {fileID: 114475915027682420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Caballero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &70251883526274650
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c60b05d999a145885287cd17acda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saludBase: 10
+  saludBase: 80
   OnMorir:
     m_PersistentCalls:
       m_Calls: []

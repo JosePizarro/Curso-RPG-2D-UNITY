@@ -11,6 +11,8 @@ public class Caballero : Enemigo {
     private bool atacando;
     private bool enCombate;
     private Vector2 direccionAtaque;
+    private int correrHash;
+    private int atacarHash;
     private Animator animator;
 
     [SerializeField] private float distanciaDeteccion;
@@ -23,6 +25,9 @@ public class Caballero : Enemigo {
         input = GetComponent<InputEnemigo>();
         atacante = GetComponent<Atacante>();
         PresentarseDeFormaCortez();
+        correrHash = Animator.StringToHash("Corriendo");
+        atacarHash = Animator.StringToHash("Atacar");
+
     }
 
     private void Update()
@@ -35,14 +40,11 @@ public class Caballero : Enemigo {
     {
         if (!muerto)
         {
-            //Ataque
+            //Ataque 
             if (!atacando && input.distanciaJugador<distanciaAtaque)
             {
-                direccionAtaque = input.direccionHaciaJugador;
-                atacando = true;
-                enCombate = true;
-                animator.SetBool("Corriendo",false);
-                animator.SetTrigger("Atacar");
+                //Clean Code 
+                RealizarAtaque();
             }
             else if (!atacando && (enCombate || input.distanciaJugador<distanciaDeteccion ))
             {
@@ -52,16 +54,31 @@ public class Caballero : Enemigo {
         }
     }
 
+    private void RealizarAtaque()
+    {
+        int probabilidadDeAtaque = Random.Range(0, 100);
+        animator.SetBool(correrHash, false);
+        Debug.Log(probabilidadDeAtaque);
+        if (probabilidadDeAtaque>95)
+        {
+            direccionAtaque = input.direccionHaciaJugador;
+            atacando = true;
+            enCombate = true;
+            animator.SetTrigger(atacarHash);
+        }
+       
+    }
+
     private void MoverHaciaJugador()
     {
+        animator.SetBool(correrHash, true);
         VoltearSprite();
         transform.position += (Vector3)input.direccionHaciaJugador * atributos.velocidad * Time.deltaTime;
     }
 
     void CaballeroAtacar()
     {
-        atacante.Atacar(direccionAtaque,atributos.ataque);
-        atacando = false;
+        atacante.Atacar(input.direccionHaciaJugador,atributos.ataque);
     }
 
     void VoltearSprite()
@@ -76,4 +93,8 @@ public class Caballero : Enemigo {
         }
     }
 
+    void SetAtacandoFalse()
+    {
+        atacando = false;
+    }
 }
