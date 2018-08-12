@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Caballero
   m_EditorClassIdentifier: 
   velocidad: 1
-  ataque: 5
+  ataque: 0
