@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(InputEnemigo))]
 public class EnemigoIA : Enemigo {
 
+    protected Habilidad habilidad;
     protected InputEnemigo input;
     private Atacante atacante;
     protected SpriteRenderer spriteRenderer;
@@ -23,6 +24,7 @@ public class EnemigoIA : Enemigo {
 
     private void Start()
     {
+        habilidad = GetComponent<Habilidad>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         input = GetComponent<InputEnemigo>();
@@ -31,8 +33,6 @@ public class EnemigoIA : Enemigo {
         correrHash = Animator.StringToHash("Corriendo");
         atacarHash = Animator.StringToHash("Atacar");
         muerteHash = Animator.StringToHash("Muerto");
-
-
     }
 
     private void Update()
