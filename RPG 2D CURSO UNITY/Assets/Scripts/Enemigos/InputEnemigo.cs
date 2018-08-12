@@ -13,7 +13,7 @@ public class InputEnemigo : MonoBehaviour {
         }
     }
     public float horizontal { get { return direccionHaciaJugador.x; }}
-    public float distancia { get {return direccionHaciaJugador.magnitude;}}
+    public float distanciaJugador { get {return direccionHaciaJugador.magnitude;}}
     public Vector2 direccionHaciaJugador { get; private set; }
 
 	// Use this for initialization

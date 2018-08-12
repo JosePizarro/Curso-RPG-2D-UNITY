@@ -22,6 +22,12 @@ GameObject:
   - component: {fileID: 212593615224843906}
   - component: {fileID: 95233860593876412}
   - component: {fileID: 114528716029653702}
+  - component: {fileID: 50545329322858082}
+  - component: {fileID: 70251883526274650}
+  - component: {fileID: 114630494523170064}
+  - component: {fileID: 114232213006191846}
+  - component: {fileID: 114582899562133676}
+  - component: {fileID: 114475915027682420}
   m_Layer: 0
   m_Name: Caballero
   m_TagString: Untagged
@@ -36,12 +42,47 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673175059861678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: -0.42, z: -0.033203125}
+  m_LocalPosition: {x: -0.59, y: -1.24, z: -0.033203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50545329322858082
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0.1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &70251883526274650
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.83, y: 1.76}
+  m_Direction: 0
 --- !u!95 &95233860593876412
 Animator:
   serializedVersion: 3
@@ -51,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 1673175059861678}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe03c0306454e4049afc1c764f0d2087, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -60,6 +101,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114232213006191846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69407670e2dc5f248a14e08723ef7b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 0}
+--- !u!114 &114475915027682420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1053b28ab4d304aa50c5a354745f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114528716029653702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,9 +135,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4449ab33d5875e46a05c0cdb8d02a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atributos: {fileID: 0}
+  atributos: {fileID: 11400000, guid: d592abc341bfed84d8186348529094ca, type: 2}
   nombre: Seiya
-  experiencia: 0
+  experiencia: 10
+  distanciaDeteccion: 5
+  distanciaAtaque: 2
+--- !u!114 &114582899562133676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01c60b05d999a145885287cd17acda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saludBase: 10
+  OnMorir:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114630494523170064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673175059861678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663bc1bacb614b34b959fab57adb4702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desfase: 1
+  hitBox: {x: 1, y: 1}
+  layerAtaque:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!212 &212593615224843906
 SpriteRenderer:
   m_ObjectHideFlags: 1
