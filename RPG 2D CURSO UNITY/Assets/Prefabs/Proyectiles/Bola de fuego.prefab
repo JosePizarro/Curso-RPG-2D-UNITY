@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114790949899370734}
   - component: {fileID: 50119442281766658}
   - component: {fileID: 212046862757495724}
-  - component: {fileID: 70575029634334592}
+  - component: {fileID: 70316210793059746}
   m_Layer: 0
   m_Name: Bola de fuego
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &70575029634334592
+--- !u!70 &70316210793059746
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,6 +92,7 @@ MonoBehaviour:
   velocidadInicial: 10
   direccionInicial: {x: 1, y: 0}
   danio: 1
+  tagObjetivo: Player
 --- !u!212 &212046862757495724
 SpriteRenderer:
   m_ObjectHideFlags: 1

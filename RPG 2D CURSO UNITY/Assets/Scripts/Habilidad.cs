@@ -6,10 +6,11 @@ public class Habilidad : MonoBehaviour {
 
     public void DispararProyectil(Proyectil proyectil, float velocidadInicial, Vector2 direccion, int danio)
     {
-        GameObject nuevoProyectil = Instantiate(proyectil.gameObject,transform.position,Quaternion.identity);
-        Proyectil miProyectil = nuevoProyectil.GetComponent<Proyectil>();
-        miProyectil.velocidadInicial = velocidadInicial;
-        miProyectil.direccionInicial = direccion;
-        miProyectil.danio = danio;
+        Proyectil nuevoProyectil = Instantiate(proyectil,transform.position,Quaternion.identity);
+        nuevoProyectil.gameObject.transform.SetParent(transform);
+      //  nuevoProyectil.gameObject.transform.SetParent(GameManager.instance.contenedorDeProyectiles);
+        nuevoProyectil.velocidadInicial = velocidadInicial;
+        nuevoProyectil.direccionInicial = direccion;
+        nuevoProyectil.danio = danio;
     }
 }

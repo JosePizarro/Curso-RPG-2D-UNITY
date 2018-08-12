@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Hechicero
   m_EditorClassIdentifier: 
   velocidad: 1
-  ataque: 0
+  ataque: 1
