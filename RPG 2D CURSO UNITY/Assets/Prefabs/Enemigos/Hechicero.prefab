@@ -26,13 +26,14 @@ GameObject:
   - component: {fileID: 114278836565294732}
   - component: {fileID: 50320389387794202}
   - component: {fileID: 70259276571211610}
+  - component: {fileID: 114959347777200666}
   m_Layer: 0
   m_Name: Hechicero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4304019176150850
 Transform:
   m_ObjectHideFlags: 1
@@ -113,8 +114,11 @@ MonoBehaviour:
   atributos: {fileID: 11400000, guid: 31c896ec582a0c74eb3fee3e37827a6c, type: 2}
   nombre: Hechicero
   experiencia: 0
+  puff: {fileID: 1668209777549172, guid: e4e294b2128565b4c8ea917545cbae0c, type: 2}
   distanciaDeteccion: 6
   distanciaAtaque: 5
+  proyectil: {fileID: 114213663288760630, guid: d9744f63cee01af45aed567fd4da13e4,
+    type: 2}
 --- !u!114 &114278836565294732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
+--- !u!114 &114959347777200666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339577462002044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0b4209ef9acd049a98fae2673e58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212024302975801122
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -159,7 +174,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da4eba6d84840ff4cac7aca353c12c63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

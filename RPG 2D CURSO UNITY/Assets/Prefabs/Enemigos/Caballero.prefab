@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673175059861678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -1.24, z: -0.033203125}
+  m_LocalPosition: {x: 3.88, y: -1.01, z: -0.033203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +60,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.1
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   atributos: {fileID: 11400000, guid: d592abc341bfed84d8186348529094ca, type: 2}
   nombre: Seiya
   experiencia: 10
+  puff: {fileID: 1668209777549172, guid: e4e294b2128565b4c8ea917545cbae0c, type: 2}
   distanciaDeteccion: 5
   distanciaAtaque: 2
 --- !u!114 &114582899562133676
@@ -151,10 +152,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c60b05d999a145885287cd17acda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saludBase: 80
+  saludBase: 1
   OnMorir:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114528716029653702}
+        m_MethodName: Morir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114630494523170064
@@ -173,6 +185,7 @@ MonoBehaviour:
   layerAtaque:
     serializedVersion: 2
     m_Bits: 1024
+  destello: {fileID: 1702271572894018, guid: 33440212a9864d245b49aef129bcddd3, type: 2}
 --- !u!212 &212593615224843906
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -188,7 +201,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da4eba6d84840ff4cac7aca353c12c63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -205,8 +218,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1867916307
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e0324d23e0083a94b9e40ab06e7687e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

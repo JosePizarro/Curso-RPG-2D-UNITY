@@ -33,6 +33,7 @@ public class EnemigoIA : Enemigo {
         correrHash = Animator.StringToHash("Corriendo");
         atacarHash = Animator.StringToHash("Atacar");
         muerteHash = Animator.StringToHash("Muerto");
+        Instantiate(puff, transform);
     }
 
     private void Update()
