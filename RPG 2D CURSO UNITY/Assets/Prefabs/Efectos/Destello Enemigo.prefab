@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198771194187034854}
   - component: {fileID: 199572443385792612}
   m_Layer: 0
-  m_Name: Destello
+  m_Name: Destello Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,13 +34,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702271572894018}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.95, y: 0.222, z: -0.36551738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198771194187034854
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -981,7 +981,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 2
-      scalar: 5.4240623
+      scalar: 7.5572057
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1021,7 +1021,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.4189186
+          value: 0.47952652
           inSlope: 0.15982437
           outSlope: 0.15982437
           tangentMode: 0
@@ -1038,7 +1038,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 1
         - serializedVersion: 3
-          time: 1
+          time: 0.9951172
           value: 1
           inSlope: 0
           outSlope: 0
@@ -4685,7 +4685,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1867916307
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

@@ -26,7 +26,6 @@ public class Atacante : MonoBehaviour {
         Debug.DrawLine(puntoA, puntoB, Color.red);
     }
 
-
     public void Atacar(Vector2 direccionDeAtaque, int danio)
     {
         CrearHitBox(direccionDeAtaque);
@@ -43,7 +42,6 @@ public class Atacante : MonoBehaviour {
             }
         }
     }
-
     private void InvocarDestello(GameObject objetoAtacado)
     {
         if (destello != null)
@@ -51,7 +49,6 @@ public class Atacante : MonoBehaviour {
             Instantiate(destello, objetoAtacado.transform);
         }
     }
-
     private void CrearHitBox(Vector2 direccionDeAtaque)
     {
         Vector2 escala = transform.lossyScale; //(2,3)

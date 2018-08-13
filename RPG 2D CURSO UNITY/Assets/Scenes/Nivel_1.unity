@@ -482,6 +482,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: da4eba6d84840ff4cac7aca353c12c63, type: 2}
+    - target: {fileID: 1339577462002044, guid: d058d164eaa36ad49a11dd502fb478f5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d058d164eaa36ad49a11dd502fb478f5, type: 2}
   m_IsPrefabAsset: 0
@@ -13466,6 +13470,12 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114265390702704432, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+        type: 2}
+      propertyPath: destello
+      value: 
+      objectReference: {fileID: 1036090596480230, guid: 40a5d7c8d0d17a54d84d74a2747e7cb7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_IsPrefabAsset: 0
@@ -13557,11 +13567,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4433211401248752, guid: 1efafb1dcbb4141488e30283f2f03a93, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.17
+      value: 3.88
       objectReference: {fileID: 0}
     - target: {fileID: 4433211401248752, guid: 1efafb1dcbb4141488e30283f2f03a93, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.67
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 4433211401248752, guid: 1efafb1dcbb4141488e30283f2f03a93, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13629,7 +13639,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1673175059861678, guid: 1efafb1dcbb4141488e30283f2f03a93, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212593615224843906, guid: 1efafb1dcbb4141488e30283f2f03a93,
         type: 2}
@@ -13646,6 +13656,12 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114630494523170064, guid: 1efafb1dcbb4141488e30283f2f03a93,
+        type: 2}
+      propertyPath: destello
+      value: 
+      objectReference: {fileID: 1702271572894018, guid: 33440212a9864d245b49aef129bcddd3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1efafb1dcbb4141488e30283f2f03a93, type: 2}
   m_IsPrefabAsset: 0
