@@ -11,6 +11,7 @@ public class Atacante : MonoBehaviour {
     public LayerMask layerAtaque;
     private Collider2D[] ataqueColliders = new Collider2D[12];
     private ContactFilter2D filtroDeAtaque;
+    public GameObject destello;
 
     private void Start()
     {
@@ -37,8 +38,17 @@ public class Atacante : MonoBehaviour {
             objetoAtacado = ataqueColliders[i].gameObject;
             if (objetoAtacado.GetComponent<Atacable>())
             {
-                objetoAtacado.GetComponent<Atacable>().RecibirAtaque(direccionDeAtaque,danio);
+                objetoAtacado.GetComponent<Atacable>().RecibirAtaque(direccionDeAtaque, danio);
+                InvocarDestello(objetoAtacado);
             }
+        }
+    }
+
+    private void InvocarDestello(GameObject objetoAtacado)
+    {
+        if (destello != null)
+        {
+            Instantiate(destello, objetoAtacado.transform);
         }
     }
 
