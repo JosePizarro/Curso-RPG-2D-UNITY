@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TextHit : MonoBehaviour {
 
-    public float tiempoDeVida = 1f;
+    public float tiempoDeVida = 2f;
     public float distanciaElevacion = 2;
     public TextMesh textMesh;
     public float tiempoInicioDesvanecer;
@@ -30,5 +30,26 @@ public class TextHit : MonoBehaviour {
             transform.localPosition += movimientoVertical;
             distanciaActual += cantidadAscender;
         }
+        else
+        {
+            if (desvaneciendo==false)
+            {
+                Destroy(gameObject, tiempoDeVida);
+                desvaneciendo = true;
+                StartCoroutine(Desvanecer());
+
+            }
+        }
 	}
+
+    IEnumerator Desvanecer()
+    {
+        Color colorActual = textMesh.color;
+        for (float alpha = 1; alpha > 0; alpha-=(1/(tiempoDeVida)*Time.deltaTime))
+        {
+            colorActual.a = alpha;
+            textMesh.color = colorActual;
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }
