@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     public Transform playerSpawnPoint; //Punto de inicio de mi jugador
     public GameObject jugador;
     public static GameManager instance { get; private set; }
+    public Transform contenedorDeProyectiles;
 
     // Use this for initialization
 
