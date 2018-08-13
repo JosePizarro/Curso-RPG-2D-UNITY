@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Jugador
   m_EditorClassIdentifier: 
   velocidad: 6
-  ataque: 2
+  ataque: 1

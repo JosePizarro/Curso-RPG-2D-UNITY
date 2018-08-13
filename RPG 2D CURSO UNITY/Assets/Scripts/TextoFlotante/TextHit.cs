@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(TextMesh))]
 public class TextHit : MonoBehaviour {
 
     public float tiempoDeVida = 2f;

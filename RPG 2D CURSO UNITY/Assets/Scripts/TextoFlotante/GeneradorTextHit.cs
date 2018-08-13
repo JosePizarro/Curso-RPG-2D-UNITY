@@ -5,16 +5,9 @@ using UnityEngine;
 public class GeneradorTextHit : MonoBehaviour {
 
     public TextHit textoHit;
-    public Rango rangoXDefault;
-    public Rango rangoYDefault;
-
-    private void Start()
-    {
-        rangoXDefault.min = -1;
-        rangoXDefault.max = 1;
-        rangoYDefault.min = -1;
-        rangoYDefault.max = 1;
-    }
+    public Rango rangoXDefault = new Rango();
+    public Rango rangoYDefault = new Rango();
+    
 
 
     public void CrearTextoHit(TextHit textHit, string contenido, Transform parent,
@@ -35,8 +28,20 @@ public class GeneradorTextHit : MonoBehaviour {
         CrearTextoHit(textHit, contenidoString, transform, tamanio, color, rangoX, rangoY, tiempoDeVida);
     }
 
+
+    public void CrearTextoHit(TextHit textHit, float contenido, Transform transform, float tamanio,
+       Color color,  float tiempoDeVida)
+    {
+        CrearTextoHit(textHit, contenido, transform, tamanio, color, rangoXDefault, rangoYDefault, tiempoDeVida);
+    }
+
     public void CrearTextoHit(string contenido)
     {
-        Debug.Log("Hola estoy creando un textoHit");
+        CrearTextoHit(textoHit, contenido, transform, 0.25f, Color.white,rangoXDefault,rangoYDefault, 2f);
+    }
+
+    public void CrearTextoHit(float contenido, Transform parent)
+    {
+        CrearTextoHit(textoHit, contenido , parent, 0.2f, Color.white,rangoXDefault,rangoYDefault, 2f);
     }
 }

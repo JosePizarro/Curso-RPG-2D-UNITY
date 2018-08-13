@@ -12,11 +12,13 @@ public class Atacante : MonoBehaviour {
     private Collider2D[] ataqueColliders = new Collider2D[12];
     private ContactFilter2D filtroDeAtaque;
     public GameObject destello;
+    private GeneradorTextHit generadorTextHit;
 
     private void Start()
     {
         filtroDeAtaque.layerMask = layerAtaque;
         filtroDeAtaque.useLayerMask = true;
+        generadorTextHit = GetComponent<GeneradorTextHit>();
     }
 
 
@@ -39,9 +41,20 @@ public class Atacante : MonoBehaviour {
             {
                 objetoAtacado.GetComponent<Atacable>().RecibirAtaque(direccionDeAtaque, danio);
                 InvocarDestello(objetoAtacado);
+                GenerarTextHit(danio, objetoAtacado);
             }
         }
     }
+
+    private void GenerarTextHit(int danio, GameObject objetoAtacado)
+    {
+        if (generadorTextHit)
+        {
+            //generadorTextHit.CrearTextoHit(generadorTextHit.textoHit, danio, objetoAtacado.transform, 0.2f , Color.white,2f);
+            generadorTextHit.CrearTextoHit(danio, objetoAtacado.transform);
+        }
+    }
+
     private void InvocarDestello(GameObject objetoAtacado)
     {
         if (destello != null)

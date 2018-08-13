@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Rango {
 
-    public float min;
-    public float max;
+    public float min = -1;
+    public float max = 1;
 }
