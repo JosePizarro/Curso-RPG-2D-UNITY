@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Salud : MonoBehaviour {
 
     public int saludBase;
+    public int salud { get { return saludBase + ModificadorSalud; } }
     private int saludActual;
     public Image barraDeSalud;
     public UnityEvent OnMorir;
@@ -17,13 +18,13 @@ public class Salud : MonoBehaviour {
         }
         set
         {
-            if (value>0 && value<=saludBase)
+            if (value>0 && value<=salud)
             {
                 saludActual = value;
             }
-            else if (value>saludBase)
+            else if (value>salud)
             {
-                saludActual = saludBase;
+                saludActual = salud;
             }
             else
             {
@@ -39,7 +40,7 @@ public class Salud : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SaludActual = saludBase;
+        SaludActual = salud;
 	}
 
     public void modificarSaludActual(int cantidad)
@@ -57,7 +58,13 @@ public class Salud : MonoBehaviour {
     {
         if (barraDeSalud)
         {
-            barraDeSalud.fillAmount = (float)SaludActual / saludBase;
+            barraDeSalud.fillAmount = (float)SaludActual / salud;
         }
+    }
+
+    public void ModificarSaludBase(int cantidad)
+    {
+        saludBase += cantidad;
+        ActualizarBarraDeSalud();
     }
 }

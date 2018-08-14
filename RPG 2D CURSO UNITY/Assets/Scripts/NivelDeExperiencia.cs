@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GeneradorTextHit))]
 public class NivelDeExperiencia : MonoBehaviour {
 
+    public BotonAtributo[] botonesAtributos;
     public Image barraDeExp;
     private GeneradorTextHit generadorText;
     private Rango rangoTextoLevelUp = new Rango() { min = 0, max = 0 };
@@ -54,6 +55,7 @@ public class NivelDeExperiencia : MonoBehaviour {
         generadorText = GetComponent<GeneradorTextHit>();
         expSiguienteNivel = CurvaExperiencia(nivel);
         ActualizarBarraDeExp();
+        LlamarBotonesAtributos();
     }
 
     private int CurvaExperiencia(int nivel)
@@ -87,10 +89,30 @@ public class NivelDeExperiencia : MonoBehaviour {
     {
         puntosDeAtributos++;
         expSiguienteNivel = CurvaExperiencia(nivel);
+        LlamarBotonesAtributos();
     }
 
     void ActualizarBarraDeExp()
     {
         barraDeExp.fillAmount = razonExpNivelActual;
+    }
+
+    public void RestarPuntoDeAtributo()
+    {
+        puntosDeAtributos--;
+        LlamarBotonesAtributos();
+    }
+
+    private void LlamarBotonesAtributos()
+    {
+        for (int boton = 0; boton < botonesAtributos.Length; boton++)
+        {
+            botonesAtributos[boton].ActivarODesactivarBoton(puntosDeAtributos);
+        }
+
+        //foreach (BotonAtributo item in botonesAtributos)
+        //{
+        //    item.ActivarODesactivarBoton(puntosDeAtributos);
+        //}
     }
 }
