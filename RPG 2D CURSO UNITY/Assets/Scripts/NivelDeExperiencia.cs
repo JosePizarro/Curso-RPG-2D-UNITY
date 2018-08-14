@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(GeneradorTextHit))]
 public class NivelDeExperiencia : MonoBehaviour {
 
+    public Image barraDeExp;
     private GeneradorTextHit generadorText;
     private Rango rangoTextoLevelUp = new Rango() { min = 0, max = 0 };
     private int experienciaActual;
@@ -24,22 +26,24 @@ public class NivelDeExperiencia : MonoBehaviour {
             {
                 razonExpNivelActual = (float)(experiencia - CurvaExperienciaAcumulativa(nivel)) / expSiguienteNivel;
                 {
-                    while (razonExpNivelActual >= 1)
-                    {
-                        LevelUp();
-                    }
+                    RevisarSiSeSubeDeNivel();
                 }
             }
             else
             {
                 razonExpNivelActual = (float)(experienciaActual) / expSiguienteNivel;
 
-                while (razonExpNivelActual >= 1)
-                {
-                    LevelUp();
-                }
+                RevisarSiSeSubeDeNivel();
             }
             ActualizarBarraDeExp();
+        }
+    }
+
+    private void RevisarSiSeSubeDeNivel()
+    {
+        while (razonExpNivelActual >= 1)
+        {
+            LevelUp();
         }
     }
 
@@ -50,6 +54,7 @@ public class NivelDeExperiencia : MonoBehaviour {
         nivel = 1;
         generadorText = GetComponent<GeneradorTextHit>();
         expSiguienteNivel = CurvaExperiencia(nivel);
+        ActualizarBarraDeExp();
     }
 
     private int CurvaExperiencia(int nivel)
@@ -76,6 +81,7 @@ public class NivelDeExperiencia : MonoBehaviour {
         nivel++;
         ConfigurarSiguienteNivel();
         generadorText.CrearTextoHit(generadorText.textoHit, "NUEVO NIVEL!!", transform, 0.4f, Color.cyan,rangoTextoLevelUp,rangoTextoLevelUp, 2f);
+        razonExpNivelActual = (float)(experiencia - CurvaExperienciaAcumulativa(nivel)) / expSiguienteNivel;
     }
 
     void ConfigurarSiguienteNivel()
@@ -86,6 +92,6 @@ public class NivelDeExperiencia : MonoBehaviour {
 
     void ActualizarBarraDeExp()
     {
-
+        barraDeExp.fillAmount = razonExpNivelActual;
     }
 }

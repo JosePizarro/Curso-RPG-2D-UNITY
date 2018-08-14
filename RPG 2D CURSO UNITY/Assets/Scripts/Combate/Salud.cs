@@ -27,6 +27,7 @@ public class Salud : MonoBehaviour {
             else
             {
                 saludActual = 0;
+                gameObject.layer = 12;
                 if (OnMorir!=null)
                 {
                     OnMorir.Invoke();

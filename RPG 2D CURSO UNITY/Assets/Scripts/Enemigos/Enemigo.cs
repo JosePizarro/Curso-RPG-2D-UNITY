@@ -13,5 +13,9 @@ public class Enemigo : MonoBehaviour {
     {
         Debug.Log("Hola, yo soy " + nombre);
     }
-    
+
+    public void EntregarExperiencia()
+    {
+        GameManager.instance.jugador.GetComponent<NivelDeExperiencia>().experiencia += experiencia;
+    }
 }
