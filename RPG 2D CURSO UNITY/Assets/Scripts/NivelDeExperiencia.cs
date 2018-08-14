@@ -48,7 +48,6 @@ public class NivelDeExperiencia : MonoBehaviour {
     }
 
 
-
     // Use this for initialization
     void Start() {
         nivel = 1;

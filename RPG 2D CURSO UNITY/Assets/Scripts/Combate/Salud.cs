@@ -8,6 +8,7 @@ public class Salud : MonoBehaviour {
     private int saludActual;
     public Image barraDeSalud;
     public UnityEvent OnMorir;
+    public int ModificadorSalud;
     public int SaludActual
     {
         get
