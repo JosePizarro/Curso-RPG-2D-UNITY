@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 1042
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 269
     height: 364
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -165,7 +165,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1089
     height: 635
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 1043
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1089
     height: 364
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 1044
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,21 +323,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Combate
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Combate
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\Jos\xE9\\Documents\\Curso Udemy\\RPG Curso Unity 2d\\RPG
     2D CURSO UNITY"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 183}
-    m_SelectedIDs: 60110000
-    m_LastClickedID: 4448
-    m_ExpandedIDs: 00000000520c00000e0d00009e0e00000c0f00009c0f000086100000601100001c1500003215000092150000483b00004a3b00004c3b000000ca9a3b
+    scrollPos: {x: 0, y: 199}
+    m_SelectedIDs: 720e0000
+    m_LastClickedID: 3698
+    m_ExpandedIDs: 000000004c0c0000080d0000980e0000060f0000960f0000801000005a110000161500002c1500008c150000623b0000643b0000663b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000520c00000e0d00009e0e00000c0f00009c0f000086100000601100001c1500003215000092150000483b00004a3b00004c3b000000ca9a3b
+    m_ExpandedIDs: 000000004c0c0000080d0000980e0000060f0000960f0000801000005a110000161500002c1500008c150000623b0000643b0000663b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,10 +480,10 @@ MonoBehaviour:
     height: 343
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: e4faffff
-    m_LastClickedID: -1308
-    m_ExpandedIDs: dcfbffff000000001a1800006018000076180000ac180000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 22060000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 94fbffffe4fbfffff4ffffff000000001a18000066180000b2180000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,7 +499,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
   - Nivel_1
@@ -533,14 +533,14 @@ MonoBehaviour:
     height: 343
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 205.70662011175153
+  lastFramingTime: 507.09426806124543
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.05573082, y: -1.425838, z: -0.59007096}
+    m_Target: {x: 3.696594, y: -2.7070444, z: -0.23265183}
     speed: 2
-    m_Value: {x: 0.05573082, y: -1.425838, z: -0.59007096}
+    m_Value: {x: 3.696594, y: -2.7070444, z: -0.23265183}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -572,9 +572,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 61.846237
+    m_Target: 25.908125
     speed: 2
-    m_Value: 61.846237
+    m_Value: 25.908125
   m_Ortho:
     m_Target: 1
     speed: 2

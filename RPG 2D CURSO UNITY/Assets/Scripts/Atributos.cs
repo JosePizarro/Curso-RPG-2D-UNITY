@@ -7,7 +7,26 @@ using UnityEngine;
 public class Atributos :ScriptableObject  {
 
     [Tooltip("Velocidad de movimiento")]
-    public int velocidad;
-    public int ataque;
+
+    [SerializeField]
+    private int velocidadBase;
+    [SerializeField]
+    private int ataqueBase;
+
+    private int velocidadModificador;
+    private int ataqueModificador;
+
+    public int velocidad { get {return velocidadBase+velocidadModificador ; } }
+    public int ataque { get { return ataqueBase + ataqueModificador; }}
+
+    public void AumentarVelocidadBase(int cantidad)
+    {
+        velocidadBase += cantidad;
+    }
+
+    public void AumentarAtaqueBase(int cantidad)
+    {
+        ataqueBase += cantidad;
+    }
     
 }
