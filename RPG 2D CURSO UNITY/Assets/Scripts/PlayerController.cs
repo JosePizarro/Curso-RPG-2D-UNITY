@@ -55,6 +55,10 @@ public class PlayerController : MonoBehaviour {
             animator.SetBool(correrHashCode, false);
         }
 
+        if (inputJugador.inventario)
+        {
+            PanelMenu.instance.AbrirCerrarPaneles();
+        }
        
     }
 
