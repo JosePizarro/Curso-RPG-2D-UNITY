@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PanelMenu : MonoBehaviour {
 
     public static PanelMenu instance { get; private set; }
@@ -50,5 +51,6 @@ public class PanelMenu : MonoBehaviour {
         canvasGroup.blocksRaycasts = false;
         canvasGroup.interactable = false;
         Time.timeScale = 1f;
+        
     }
 }
