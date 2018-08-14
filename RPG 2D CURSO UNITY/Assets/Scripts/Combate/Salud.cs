@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Salud : MonoBehaviour {
 
     public int saludBase;
     private int saludActual;
+    public Image barraDeSalud;
     public UnityEvent OnMorir;
     public int SaludActual
     {
@@ -41,10 +43,19 @@ public class Salud : MonoBehaviour {
     public void modificarSaludActual(int cantidad)
     {
         SaludActual += cantidad;
+        ActualizarBarraDeSalud();
     }
 
     private void DestruirGameObject()
     {
         Destroy(gameObject);
+    }
+
+    private void ActualizarBarraDeSalud()
+    {
+        if (barraDeSalud)
+        {
+            barraDeSalud.fillAmount = (float)SaludActual / saludBase;
+        }
     }
 }

@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114265390702704432}
   - component: {fileID: 114102752193587830}
   - component: {fileID: 114182997291689778}
+  - component: {fileID: 114097856637265822}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -43,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1604799604855434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: 9.03, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,6 +103,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114097856637265822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604799604855434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c23e74874b4cb4183afb66c88c9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoHit: {fileID: 114516426574434050, guid: 242329d3e6cb7ce4ca94844e11857674, type: 2}
 --- !u!114 &114102752193587830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saludBase: 10
+  barraDeSalud: {fileID: 0}
   OnMorir:
     m_PersistentCalls:
       m_Calls: []
@@ -146,6 +160,7 @@ MonoBehaviour:
   layerAtaque:
     serializedVersion: 2
     m_Bits: 256
+  destello: {fileID: 1036090596480230, guid: 40a5d7c8d0d17a54d84d74a2747e7cb7, type: 2}
 --- !u!114 &114296271644794112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,7 +213,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da4eba6d84840ff4cac7aca353c12c63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
