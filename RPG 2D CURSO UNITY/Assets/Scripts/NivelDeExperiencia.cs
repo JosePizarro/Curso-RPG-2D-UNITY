@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(GeneradorTextHit))]
 public class NivelDeExperiencia : MonoBehaviour {
 
+    private GeneradorTextHit generadorText;
+    private Rango rangoTextoLevelUp = new Rango() { min = 0, max = 0 };
     private int experienciaActual;
     private int expSiguienteNivel; //experiencia necesaria para subir al siguiente nivel
     private float razonExpNivelActual; //Será el % de experiencia para subir de nivel
+    private int puntosDeAtributos;
     private int nivel { get; set; }
 
     public int experiencia
@@ -43,7 +47,9 @@ public class NivelDeExperiencia : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        nivel = 1;
+        generadorText = GetComponent<GeneradorTextHit>();
+        expSiguienteNivel = CurvaExperiencia(nivel);
     }
 
     private int CurvaExperiencia(int nivel)
@@ -67,12 +73,15 @@ public class NivelDeExperiencia : MonoBehaviour {
 
     private void LevelUp()
     {
-
+        nivel++;
+        ConfigurarSiguienteNivel();
+        generadorText.CrearTextoHit(generadorText.textoHit, "NUEVO NIVEL!!", transform, 0.4f, Color.cyan,rangoTextoLevelUp,rangoTextoLevelUp, 2f);
     }
 
     void ConfigurarSiguienteNivel()
     {
-
+        puntosDeAtributos++;
+        expSiguienteNivel = CurvaExperiencia(nivel);
     }
 
     void ActualizarBarraDeExp()
