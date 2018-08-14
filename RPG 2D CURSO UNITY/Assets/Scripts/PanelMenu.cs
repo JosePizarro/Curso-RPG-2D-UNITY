@@ -40,6 +40,7 @@ public class PanelMenu : MonoBehaviour {
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.interactable = true;
+        Time.timeScale = 0;
     }
 
     private void CerrarPaneles()
@@ -48,5 +49,6 @@ public class PanelMenu : MonoBehaviour {
         canvasGroup.alpha = 0;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.interactable = false;
+        Time.timeScale = 1f;
     }
 }
