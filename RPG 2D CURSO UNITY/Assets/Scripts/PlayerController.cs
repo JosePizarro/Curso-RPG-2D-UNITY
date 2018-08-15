@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private InputPlayer inputJugador;
-    private Transform transformada;
     private float horizontal;
     private float vertical;
     private Rigidbody2D miRigidbody2D; //camelCase
@@ -13,27 +12,23 @@ public class PlayerController : MonoBehaviour {
     private SpriteRenderer miSprite;
     public Atributos atributosJugador;
     private Atacante atacante;
+    private NivelDeExperiencia nivelDeExperiencia;
+    private Salud salud;
     int correrHashCode;
-    public int[] arrayPrueba2 = new int[5];
-    public int[] arrayPrueba = { 2, 3, 5, 1, 6 };
+   
 
 	// Use this for initialization
 	void Start () {
-        arrayPrueba2[0] = 2;
-        arrayPrueba2[1] = 3;
-        arrayPrueba2[2] = 5;
-        arrayPrueba2[3] = 1;
-        arrayPrueba2[4] = 6;
-        arrayPrueba[0] = 10;
-        
-        Debug.Log(arrayPrueba.Length);
+
+        nivelDeExperiencia = GetComponent<NivelDeExperiencia>();
+        salud = GetComponent<Salud>();
         inputJugador = GetComponent<InputPlayer>();
-        transformada = GetComponent<Transform>();
         miRigidbody2D = GetComponent<Rigidbody2D>(); //El rigidbody2d de este gameObject
         animator = GetComponent<Animator>();
         miSprite = GetComponent<SpriteRenderer>();
         atacante = GetComponent<Atacante>();
         correrHashCode = Animator.StringToHash("Corriendo");
+        PanelAtributos.instance.ActualizarTextosAtributos(atributosJugador, salud, nivelDeExperiencia);
 	}
 
     // Update is called once per frame

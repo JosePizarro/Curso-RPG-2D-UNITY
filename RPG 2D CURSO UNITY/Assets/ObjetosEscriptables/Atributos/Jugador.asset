@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99345ac9646b87f4eb0718a8f928aee6, type: 3}
   m_Name: Jugador
   m_EditorClassIdentifier: 
-  velocidadBase: 0
-  ataqueBase: 1
+  velocidadBase: 5
+  ataqueBase: 6

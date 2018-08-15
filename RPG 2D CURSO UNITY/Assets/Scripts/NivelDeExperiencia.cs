@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GeneradorTextHit))]
 public class NivelDeExperiencia : MonoBehaviour {
 
+    private PlayerController jugador;
+    private Salud salud;
     public BotonAtributo[] botonesAtributos;
     public Image barraDeExp;
     private GeneradorTextHit generadorText;
@@ -13,8 +15,8 @@ public class NivelDeExperiencia : MonoBehaviour {
     private int experienciaActual;
     private int expSiguienteNivel; //experiencia necesaria para subir al siguiente nivel
     private float razonExpNivelActual; //Será el % de experiencia para subir de nivel
-    private int puntosDeAtributos;
-    private int nivel { get; set; }
+    public int puntosDeAtributos;
+    public int nivel { get; set; }
 
     public int experiencia
     {
@@ -37,6 +39,7 @@ public class NivelDeExperiencia : MonoBehaviour {
                 RevisarSiSeSubeDeNivel();
             }
             ActualizarBarraDeExp();
+            ActualizarPanelDeAtributos();
         }
     }
 
@@ -53,6 +56,8 @@ public class NivelDeExperiencia : MonoBehaviour {
     void Start() {
         nivel = 1;
         generadorText = GetComponent<GeneradorTextHit>();
+        jugador = GetComponent<PlayerController>();
+        salud = GetComponent<Salud>();
         expSiguienteNivel = CurvaExperiencia(nivel);
         ActualizarBarraDeExp();
         LlamarBotonesAtributos();
@@ -101,6 +106,7 @@ public class NivelDeExperiencia : MonoBehaviour {
     {
         puntosDeAtributos--;
         LlamarBotonesAtributos();
+        ActualizarPanelDeAtributos();
     }
 
     private void LlamarBotonesAtributos()
@@ -114,5 +120,10 @@ public class NivelDeExperiencia : MonoBehaviour {
         //{
         //    item.ActivarODesactivarBoton(puntosDeAtributos);
         //}
+    }
+
+    private void ActualizarPanelDeAtributos()
+    {
+        PanelAtributos.instance.ActualizarTextosAtributos(jugador.atributosJugador, salud, this);
     }
 }
