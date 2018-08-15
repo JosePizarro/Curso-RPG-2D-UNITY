@@ -4681,6 +4681,11 @@ Prefab:
       propertyPath: contenedorDeProyectiles
       value: 
       objectReference: {fileID: 1880927134}
+    - target: {fileID: 114432617604584258, guid: 9da693bd4f825934eb9caab82ef67e23,
+        type: 2}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 1233802129}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9da693bd4f825934eb9caab82ef67e23, type: 2}
   m_IsPrefabAsset: 0
@@ -6844,40 +6849,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 50835682474683810, guid: 5fe294a08d50b014bb9b367b033dd011,
-        type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50835682474683810, guid: 5fe294a08d50b014bb9b367b033dd011,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe294a08d50b014bb9b367b033dd011, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1207898082 stripped
+--- !u!1 &1233802129 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1118546244327018, guid: 5fe294a08d50b014bb9b367b033dd011,
+  m_CorrespondingSourceObject: {fileID: 1604799604855434, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
     type: 2}
-  m_PrefabInternal: {fileID: 1207898081}
---- !u!114 &1207898083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1207898082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019e63659c7fe4448b2544de32bee7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteraccion:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  m_PrefabInternal: {fileID: 1778383130}
 --- !u!1001 &1259589391
 Prefab:
   m_ObjectHideFlags: 0
@@ -22754,6 +22733,11 @@ Prefab:
       propertyPath: botonesAtributos.Array.data[1]
       value: 
       objectReference: {fileID: 1110773244}
+    - target: {fileID: 114296271644794112, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+        type: 2}
+      propertyPath: layerInteraccion.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114500908676838264, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
@@ -23389,6 +23373,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf47bbed415d9954ebc8208ceff86f59, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2031746245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1806158035486084, guid: 17f49e1911518704ca46b365f510326d,
+    type: 2}
+  m_PrefabInternal: {fileID: 599342692}
+--- !u!114 &2031746251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031746245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1690312454, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_MaxRayIntersections: 0
 --- !u!1 &2098539431
 GameObject:
   m_ObjectHideFlags: 0
