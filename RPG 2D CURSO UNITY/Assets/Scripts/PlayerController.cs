@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     private SpriteRenderer miSprite;
     public Atributos atributosJugador;
+    public LayerMask layerInteraccion;
     private Atacante atacante;
     private NivelDeExperiencia nivelDeExperiencia;
     private Salud salud;
@@ -99,5 +100,12 @@ public class PlayerController : MonoBehaviour {
     {
         atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
         animator.SetBool("Atacando", false);
+    }
+
+
+    //Llamar a interactuar con alguna tecla o haciendo click
+    public void Interactuar()
+    {
+        RaycastHit2D[] circleCast = Physics2D.CircleCastAll(transform.position, GetComponent<CapsuleCollider2D>().size.x, inputJugador.direccionMirada.normalized, 2f, layerInteraccion);
     }
 }
