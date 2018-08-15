@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 114182997291689778}
   - component: {fileID: 114097856637265822}
   - component: {fileID: 114064029605827190}
-  - component: {fileID: 114500908676838264}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -332,7 +331,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d119c1811caf574f9cbbcde66605ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botonesAtributos:
+  - {fileID: 0}
+  - {fileID: 0}
   barraDeExp: {fileID: 0}
+  puntosDeAtributos: 0
 --- !u!114 &114097856637265822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -363,6 +366,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  ModificadorSalud: 0
 --- !u!114 &114182997291689778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,20 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atributosJugador: {fileID: 11400000, guid: f44184b7f7187ca46a7fecccf843a3ae, type: 2}
-  arrayPrueba2: 0000000000000000000000000000000000000000
-  arrayPrueba: 0200000003000000050000000100000006000000
---- !u!114 &114500908676838264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1604799604855434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d119c1811caf574f9cbbcde66605ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barraDeExp: {fileID: 0}
+  layerInteraccion:
+    serializedVersion: 2
+    m_Bits: 8448
 --- !u!114 &114618731516226918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,7 +558,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1867916307
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9ca96160775f5fc4da40877efb35f8f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

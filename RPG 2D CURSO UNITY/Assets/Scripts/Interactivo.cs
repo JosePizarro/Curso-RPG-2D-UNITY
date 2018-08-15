@@ -6,14 +6,14 @@ using UnityEngine.EventSystems;
 
 public class Interactivo : MonoBehaviour,IPointerDownHandler {
 
-    private Collider2D micolisionador;
+    protected BoxCollider2D micolisionador;
     public UnityEvent OnInteraccion;
-    private PlayerController player;
+    protected PlayerController player;
     
 
     private void Start()
     {
-        micolisionador = GetComponent<Collider2D>();
+        micolisionador = GetComponent<BoxCollider2D>();
         player = GameManager.instance.jugador.GetComponent<PlayerController>();
     }
 
