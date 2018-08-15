@@ -46,7 +46,7 @@ public class Casilla : MonoBehaviour,IPointerDownHandler {
         {
             if (itemAlmacenado.UsarItem())
             {
-                cantidadStock--;
+                ReducirStock(1);
             }
         }
     }
@@ -64,6 +64,6 @@ public class Casilla : MonoBehaviour,IPointerDownHandler {
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        UsarObjetoEnCasilla();
     }
 }
