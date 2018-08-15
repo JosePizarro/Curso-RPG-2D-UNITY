@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Minimapa
   - Muerto
-  - 
+  - Objeto
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Muralla
     uniqueID: 2806697675
+    locked: 0
+  - name: Drop
+    uniqueID: 3834072183
     locked: 0
   - name: Elementos
     uniqueID: 2427050989

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b05abc77b71e4eb4a4048ff9e413d, type: 3}
   m_Name: PocionVacia
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  nombre: 
-  apilable: 0
-  descripcion: 
+  sprite: {fileID: 21300374, guid: 7759c37908ddc594c892bff2d40eef9a, type: 3}
+  nombre: Pocion Vacia
+  apilable: 1
+  descripcion: Solo es una pocion que hace absolutamente nada
