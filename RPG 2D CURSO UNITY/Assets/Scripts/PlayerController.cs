@@ -104,8 +104,16 @@ public class PlayerController : MonoBehaviour {
 
 
     //Llamar a interactuar con alguna tecla o haciendo click
-    public void Interactuar()
+    public RaycastHit2D[] Interactuar()
     {
         RaycastHit2D[] circleCast = Physics2D.CircleCastAll(transform.position, GetComponent<CapsuleCollider2D>().size.x, inputJugador.direccionMirada.normalized, 2f, layerInteraccion);
+        if (circleCast!= null)
+        {
+            return circleCast;
+        }
+        else
+        {
+            return null;
+        }
     }
 }
