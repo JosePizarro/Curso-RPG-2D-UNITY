@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5062c0ec3363049b024520dfb9acb8, type: 3}
+  m_Name: PocionSalud
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  nombre: 
+  apilable: 0
+  descripcion: 
+  curacion: 0
