@@ -53,7 +53,7 @@ public class NivelDeExperiencia : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start() {
+    void Awake() {
         nivel = 1;
         generadorText = GetComponent<GeneradorTextHit>();
         jugador = GetComponent<PlayerController>();

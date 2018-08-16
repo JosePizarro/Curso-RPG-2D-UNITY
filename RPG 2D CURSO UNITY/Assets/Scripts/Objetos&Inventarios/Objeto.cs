@@ -31,6 +31,9 @@ public class Objeto : Interactivo {
 
     public override void Interaccion()
     {
-        Debug.Log("Interactuando con " + item.name);
+        if (Inventario.instance.AgregarObjeto(item,cantidad))
+        {
+            Destroy(gameObject);
+        }
     }
 }

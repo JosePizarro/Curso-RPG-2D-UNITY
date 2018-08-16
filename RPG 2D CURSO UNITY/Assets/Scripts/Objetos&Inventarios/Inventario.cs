@@ -37,7 +37,7 @@ public class Inventario : MonoBehaviour {
     {
         DeterminarSiguienteCasillaVacia();
         //El inventario está lleno? El objeto a agregar es apilable? Si es apilable, tengo una copia de este en mi inventario?
-        if ((item.apilable && !objetos.Contains(item) && !inventarioLleno) || (item.apilable && !inventarioLleno))
+        if ((item.apilable && !objetos.Contains(item) && !inventarioLleno) || (!item.apilable && !inventarioLleno))
         {
             //Nuestro item es apilable y no tenemos copia de el o nuestro objeto no es apilable  (tenemo espacio en el inventario)
             Casilla casillaAñadir = casillas[casillaVacia];

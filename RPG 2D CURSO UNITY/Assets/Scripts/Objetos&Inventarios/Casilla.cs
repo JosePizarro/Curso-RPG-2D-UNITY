@@ -34,6 +34,7 @@ public class Casilla : MonoBehaviour,IPointerDownHandler {
 
     public void EliminarObjeto()
     {
+        Inventario.instance.RemoverObjeto(itemAlmacenado);
         image.sprite = null;
         cantidadStock = 0;
         image.enabled = false;
@@ -59,7 +60,6 @@ public class Casilla : MonoBehaviour,IPointerDownHandler {
             EliminarObjeto();
         }
     }
-
 
 
     public void OnPointerDown(PointerEventData eventData)
