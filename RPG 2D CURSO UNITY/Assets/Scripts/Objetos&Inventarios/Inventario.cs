@@ -39,8 +39,34 @@ public class Inventario : MonoBehaviour {
         //El inventario está lleno? El objeto a agregar es apilable? Si es apilable, tengo una copia de este en mi inventario?
         if ((item.apilable && !objetos.Contains(item) && !inventarioLleno) || (item.apilable && !inventarioLleno))
         {
-            //Agregar un objeto nuevo
+            //Nuestro item es apilable y no tenemos copia de el o nuestro objeto no es apilable  (tenemo espacio en el inventario)
+            Casilla casillaAñadir = casillas[casillaVacia];
+            objetos.Add(item);
+            casillaAñadir.AgregarObjeto(item, cantidad);
+            return true;
         }
-        return true;
+        else if (item.apilable==true && objetos.Contains(item))
+        {
+            //Nuestro objeto es apilable y tenemos una copia de el en alguna casilla
+            for (int i = 0; i < casillas.Length; i++)
+            {
+                if (item==casillas[i].itemAlmacenado)
+                {
+                    casillas[i].cantidadStock += cantidad;
+                    break;
+                }
+            }
+            return true;
+        }
+        else
+        {
+            Debug.Log("InventarioLleno");
+            return false;
+        }
+    }
+
+    public void RemoverObjeto(Item item)
+    {
+        objetos.Remove(item);
     }
 }
