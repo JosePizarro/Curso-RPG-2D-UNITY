@@ -17,13 +17,12 @@ public class Equipamiento : Item
 
     public override bool UsarItem()
     {
-
         Equipamiento equipamientoActualmenteEquipado = PanelEquipamiento.instance.EquiparObjeto(this);
         if (equipamientoActualmenteEquipado)
         {
+            PanelEquipamiento.instance.RemoverEquipo(equipamientoActualmenteEquipado);
             Inventario.instance.AgregarObjeto(equipamientoActualmenteEquipado, 1);
         }
-
         return true;
     }
 

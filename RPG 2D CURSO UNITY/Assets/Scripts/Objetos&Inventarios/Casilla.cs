@@ -32,9 +32,14 @@ public class Casilla : MonoBehaviour,IPointerDownHandler {
         cantidadStock = cantidad;
     }
 
-    public void EliminarObjeto()
+    public virtual void EliminarObjeto()
     {
         Inventario.instance.RemoverObjeto(itemAlmacenado);
+        ResetearCasilla();
+    }
+
+    protected void ResetearCasilla()
+    {
         image.sprite = null;
         cantidadStock = 0;
         image.enabled = false;

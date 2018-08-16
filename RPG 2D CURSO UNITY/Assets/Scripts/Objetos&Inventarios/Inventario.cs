@@ -26,6 +26,10 @@ public class Inventario : MonoBehaviour {
             {
                 casillaVacia++;
             }
+            else
+            {
+                break;
+            }
         }
         if (casillaVacia>=casillas.Length)
         {

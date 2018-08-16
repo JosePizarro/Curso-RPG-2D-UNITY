@@ -47,12 +47,12 @@ public class PanelEquipamiento : MonoBehaviour {
     {
         casillaEquipo.AgregarObjeto(equipamiento, 1);
         equipamientos.Add(equipamiento);
-        //Atributos ActualizarEquipamiento()
+        atributos.ActualizarEquipamiento(equipamientos);
     }
 
     public void RemoverEquipo(Equipamiento equipamiento)
     {
         equipamientos.Remove(equipamiento);
-        //Atributos ActualizarEquipamiento()
+        atributos.ActualizarEquipamiento(equipamientos);
     }
 }

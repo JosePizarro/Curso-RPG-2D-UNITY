@@ -54,7 +54,7 @@ public class Salud : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    private void ActualizarBarraDeSalud()
+    public void ActualizarBarraDeSalud()
     {
         if (barraDeSalud)
         {

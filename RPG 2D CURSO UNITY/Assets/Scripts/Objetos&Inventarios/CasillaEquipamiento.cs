@@ -20,4 +20,10 @@ public class CasillaEquipamiento : Casilla {
             EliminarObjeto();
         }
     }
+
+    public override void EliminarObjeto()
+    {
+        PanelEquipamiento.instance.RemoverEquipo((Equipamiento)itemAlmacenado);
+        ResetearCasilla();
+    }
 }
