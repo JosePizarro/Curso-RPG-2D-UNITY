@@ -10,14 +10,20 @@ public enum Equipo
 [CreateAssetMenu(menuName ="ObjetosEscriptables/items/Equipamiento")]
 public class Equipamiento : Item
 {
-    public Equipo tipoDeEquipamiento;
+    public Equipo tipoEquipamiento;
     public int salud;
     public int ataque;
     public int velocidad;
 
     public override bool UsarItem()
     {
-        //Equipar o desequipar 
+
+        Equipamiento equipamientoActualmenteEquipado = PanelEquipamiento.instance.EquiparObjeto(this);
+        if (equipamientoActualmenteEquipado)
+        {
+            Inventario.instance.AgregarObjeto(equipamientoActualmenteEquipado, 1);
+        }
+
         return true;
     }
 

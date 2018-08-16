@@ -14,13 +14,9 @@ public class CasillaEquipamiento : Casilla {
 
     private void DesequiparObjeto()
     {
-        if (Inventario.instance.inventarioLleno)
+
+        if (Inventario.instance.AgregarObjeto(itemAlmacenado, 1))
         {
-            Debug.Log("No me puedod desequipar porque el inventario está lleno");
-        }
-        else
-        {
-            Inventario.instance.AgregarObjeto(itemAlmacenado, 1);
             EliminarObjeto();
         }
     }

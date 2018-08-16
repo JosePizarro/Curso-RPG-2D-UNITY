@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5062c0ec3363049b024520dfb9acb8, type: 3}
   m_Name: PocionSalud
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  nombre: 
-  apilable: 0
-  descripcion: 
-  curacion: 0
+  sprite: {fileID: 21300374, guid: 7759c37908ddc594c892bff2d40eef9a, type: 3}
+  nombre: Pocion de Salud
+  apilable: 1
+  descripcion: Cura +3HP
+  curacion: 3

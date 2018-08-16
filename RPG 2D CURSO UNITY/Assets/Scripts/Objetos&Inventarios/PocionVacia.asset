@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300374, guid: 7759c37908ddc594c892bff2d40eef9a, type: 3}
   nombre: Pocion Vacia
-  apilable: 1
+  apilable: 0
   descripcion: Solo es una pocion que hace absolutamente nada

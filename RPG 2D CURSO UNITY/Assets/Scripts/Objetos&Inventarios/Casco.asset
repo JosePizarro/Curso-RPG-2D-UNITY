@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cca8c1d0295236a40b0ad4db321ffeea, type: 3}
-  m_Name: New Equipamiento
+  m_Name: Casco
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  nombre: 
+  sprite: {fileID: 21300000, guid: 5eb566a5725977e48b02f783898d837a, type: 3}
+  nombre: Casco
   apilable: 0
-  descripcion: 
+  descripcion: Un casco
   tipoDeEquipamiento: 0
-  salud: 0
-  ataque: 0
-  velocidad: 0
+  salud: 10
+  ataque: 5
+  velocidad: 1
