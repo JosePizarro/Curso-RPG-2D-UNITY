@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Habilidad : MonoBehaviour {
+public class Habilidad : MonoBehaviour
+{
 
     public void DispararProyectil(Proyectil proyectil, float velocidadInicial, Vector2 direccion, int danio)
     {
@@ -15,6 +16,7 @@ public class Habilidad : MonoBehaviour {
         float anguloRotacion = Mathf.Atan2(direccion.y, direccion.x)*Mathf.Rad2Deg;
         nuevoProyectil.transform.Rotate(0, 0, anguloRotacion);
     }
+
 
     public void Dash(Vector2 direccionDash, Rigidbody2D rigidbody2D)
     {

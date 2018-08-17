@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public Proyectil proyectil;
     private InputPlayer inputJugador;
     private float horizontal;
     private float vertical;
@@ -124,6 +125,11 @@ public class PlayerController : MonoBehaviour {
             habilidad.Dash(inputJugador.direccionMirada, miRigidbody2D);
 
             ActivarODesactivarTrailRenderer();
+        }
+
+        if (inputJugador.habilidad1)
+        {
+            habilidad.DispararProyectil(proyectil, 10f, inputJugador.direccionMirada, atributosJugador.ataque);
         }
     }
 
