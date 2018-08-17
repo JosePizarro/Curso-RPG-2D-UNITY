@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour {
     {
         DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
-      //  ReproducirMusica(0);
+        ReproducirMusica(0);
 
     }
 
@@ -33,4 +33,5 @@ public class MusicManager : MonoBehaviour {
         audioSource.clip = musicas[indice];
         audioSource.Play();
     }
+ 
 }
