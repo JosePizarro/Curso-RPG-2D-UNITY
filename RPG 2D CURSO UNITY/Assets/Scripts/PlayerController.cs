@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public Proyectil proyectil;
+    private Pies pies;
     private InputPlayer inputJugador;
     private float horizontal;
     private float vertical;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        pies = GetComponentInChildren<Pies>();
         trailRenderer = GetComponent<TrailRenderer>();
         habilidad = GetComponent<Habilidad>();
         nivelDeExperiencia = GetComponent<NivelDeExperiencia>();
@@ -164,5 +166,10 @@ public class PlayerController : MonoBehaviour {
         {
             return null;
         }
+    }
+
+    private void Pisar()
+    {
+        pies.ReproducirSonido();
     }
 }
