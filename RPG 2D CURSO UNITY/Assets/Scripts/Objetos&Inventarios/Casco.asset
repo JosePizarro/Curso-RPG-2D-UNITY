@@ -15,7 +15,7 @@ MonoBehaviour:
   nombre: Casco
   apilable: 0
   descripcion: Un casco
-  tipoDeEquipamiento: 0
+  tipoEquipamiento: 1
   salud: 10
   ataque: 5
   velocidad: 1

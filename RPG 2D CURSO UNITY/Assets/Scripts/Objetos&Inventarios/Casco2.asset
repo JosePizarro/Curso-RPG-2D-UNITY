@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca8c1d0295236a40b0ad4db321ffeea, type: 3}
   m_Name: Casco2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  nombre: 
+  sprite: {fileID: 21300084, guid: 7759c37908ddc594c892bff2d40eef9a, type: 3}
+  nombre: Casco2
   apilable: 0
   descripcion: 
   tipoEquipamiento: 0
-  salud: 0
-  ataque: 0
-  velocidad: 0
+  salud: 10
+  ataque: 1
+  velocidad: 1
