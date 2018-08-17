@@ -22,7 +22,10 @@ public class MusicManager : MonoBehaviour {
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
+      //  ReproducirMusica(0);
+
     }
 
     public void ReproducirMusica(int indice)
@@ -30,6 +33,4 @@ public class MusicManager : MonoBehaviour {
         audioSource.clip = musicas[indice];
         audioSource.Play();
     }
-
-  
 }

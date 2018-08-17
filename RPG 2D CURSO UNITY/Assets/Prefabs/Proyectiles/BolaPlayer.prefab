@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114213663288760630}
   - component: {fileID: 70605714183117766}
   m_Layer: 0
-  m_Name: BolaDeFuego
+  m_Name: BolaPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
   velocidadInicial: 10
   direccionInicial: {x: 0, y: 0}
   danio: 0
-  tagObjetivo: Player
+  tagObjetivo: Enemigo
 --- !u!198 &198070250594548176
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -13857,7 +13857,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1867916307
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -13914,7 +13914,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1867916307
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -13971,7 +13971,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1867916307
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
