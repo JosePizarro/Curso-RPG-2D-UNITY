@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,12 +16,17 @@ public class PlayerController : MonoBehaviour {
     private Atacante atacante;
     private NivelDeExperiencia nivelDeExperiencia;
     private Salud salud;
+    private Habilidad habilidad;
+    private TrailRenderer trailRenderer;
+    private float dashCooldown=0; //Tiempo en el cual se tardará en ejecutar la habilidad
+    private bool usandoDash;
     int correrHashCode;
    
 
 	// Use this for initialization
 	void Start () {
-
+        trailRenderer = GetComponent<TrailRenderer>();
+        habilidad = GetComponent<Habilidad>();
         nivelDeExperiencia = GetComponent<NivelDeExperiencia>();
         salud = GetComponent<Salud>();
         inputJugador = GetComponent<InputPlayer>();
@@ -55,7 +61,23 @@ public class PlayerController : MonoBehaviour {
         {
             PanelMenu.instance.AbrirCerrarPaneles();
         }
-       
+
+        ActualizarDashCoolDown();
+    }
+
+    private void ActualizarDashCoolDown()
+    {
+        if (usandoDash)
+        {
+            dashCooldown += Time.deltaTime;
+            if (dashCooldown>trailRenderer.time)
+            {
+                ActivarODesactivarTrailRenderer();
+                dashCooldown = 0;
+                usandoDash = false;
+            }
+        }
+
     }
 
     private void VoltearSprite()
@@ -89,10 +111,19 @@ public class PlayerController : MonoBehaviour {
         {
             miRigidbody2D.velocity = Vector2.zero; 
         }
-        else
+        else if((horizontal != 0 || vertical != 0) && !usandoDash)
         {
             Vector2 vectorVelocidad = new Vector2(horizontal, vertical) * atributosJugador.velocidad;
             miRigidbody2D.velocity = vectorVelocidad;
+        }
+
+        //---Habilidades---//
+        if (inputJugador.habilidad2)
+        {
+            usandoDash = true;
+            habilidad.Dash(inputJugador.direccionMirada, miRigidbody2D);
+
+            ActivarODesactivarTrailRenderer();
         }
     }
 
@@ -100,6 +131,18 @@ public class PlayerController : MonoBehaviour {
     {
         atacante.Atacar(inputJugador.direccionMirada, atributosJugador.ataque);
         animator.SetBool("Atacando", false);
+    }
+
+    private void ActivarODesactivarTrailRenderer()
+    {
+        if (trailRenderer.enabled)
+        {
+            trailRenderer.enabled = false;
+        }
+        else
+        {
+            trailRenderer.enabled = true;
+        }
     }
 
 

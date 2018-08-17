@@ -24489,6 +24489,11 @@ Prefab:
       propertyPath: barraDeSalud
       value: 
       objectReference: {fileID: 722256458}
+    - target: {fileID: 96661323690618808, guid: ee0a5dcea20f3714b9ba58b44b3f8503,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0a5dcea20f3714b9ba58b44b3f8503, type: 2}
   m_IsPrefabAsset: 0

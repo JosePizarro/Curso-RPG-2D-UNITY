@@ -15,4 +15,10 @@ public class Habilidad : MonoBehaviour {
         float anguloRotacion = Mathf.Atan2(direccion.y, direccion.x)*Mathf.Rad2Deg;
         nuevoProyectil.transform.Rotate(0, 0, anguloRotacion);
     }
+
+    public void Dash(Vector2 direccionDash, Rigidbody2D rigidbody2D)
+    {
+        Vector2 direccionvelocidad = direccionDash.normalized * 20;
+        rigidbody2D.velocity = direccionvelocidad;
+    }
 }
