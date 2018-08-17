@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Atacante : MonoBehaviour {
 
+    public AudioClip sonidoAtaque;
+    private AudioSource audioSource;
     public float desfase = 1f;
     public Vector2 hitBox = new Vector2(1, 1);
     private Vector2 vectorDesfaseAtaque;
@@ -16,6 +18,7 @@ public class Atacante : MonoBehaviour {
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         filtroDeAtaque.layerMask = layerAtaque;
         filtroDeAtaque.useLayerMask = true;
         generadorTextHit = GetComponent<GeneradorTextHit>();
@@ -34,6 +37,8 @@ public class Atacante : MonoBehaviour {
        GameObject objetoAtacado;
        int elementosAtacados=  Physics2D.OverlapArea(puntoA, puntoB,filtroDeAtaque,ataqueColliders);
         Debug.Log("el numero de elementos atacados es"+elementosAtacados);
+        audioSource.clip = sonidoAtaque;
+        audioSource.Play();
         for(int i = 0; i < elementosAtacados; i++)
         {
             objetoAtacado = ataqueColliders[i].gameObject;
